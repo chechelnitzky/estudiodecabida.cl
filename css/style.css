@@ -173,7 +173,7 @@ p{margin:0 0 12px}
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:95% center;
+  object-position:-95% center;
 }
 
 .hero__visual--home::after{
