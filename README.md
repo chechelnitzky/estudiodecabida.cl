@@ -1,2 +1,3 @@
-# estudiodecabida.cl
-Estudios de Cabida
+# estudiosdecabida.cl starter
+
+Estructura multipágina HTML/CSS/JS lista para GitHub Pages.
