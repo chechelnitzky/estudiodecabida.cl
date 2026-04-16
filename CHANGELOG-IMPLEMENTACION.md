@@ -30,3 +30,10 @@
 - Favicon y metadatos compartidos consistentes.
 - JS de WhatsApp ajustado para respetar textos generados y formulario.
 - CSS centralizado y reforzado para mobile.
+
+
+## Upgrade de sistema visual inspirado en referencia externa
+- Se unificó el lenguaje visual completo con una paleta más tecnológica y autoritaria.
+- Se convirtió el hero de páginas interiores en un shell premium oscuro con bordes luminosos, grilla sutil y visual más cinematográfico.
+- Se elevaron cards, pricing, tablas, formularios, breadcrumbs, CTA bands y footer con una estética consistente de mayor nivel.
+- Se mantuvo el contenido y la estructura, subiendo la percepción de marca y autoridad sin rehacer el stack.
