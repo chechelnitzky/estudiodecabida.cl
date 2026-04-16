@@ -1,39 +1,34 @@
-# Resumen de mejoras implementadas
+# Implementación final
 
-## SEO
-- Titles y meta descriptions reescritos en páginas clave.
-- Canonicals consistentes.
-- Breadcrumbs visibles y con schema.
-- Schema Organization, WebSite, Service y FAQPage donde corresponde.
-- Mayor profundidad de contenido en home y páginas satélite.
-- Nueva página índice de comunas y nuevas páginas locales: Providencia, Vitacura y Lo Barnechea.
-- Sitemap.xml y llms.txt actualizados.
+## Diseño y sistema visual
+- Se rehízo el CSS completo con una paleta cinematográfica 60-30-10: base navy profunda, cuerpo mineral claro y acentos violeta/azul controlados.
+- Se mantuvo el efecto de cards claras flotando sobre fondo oscuro, pero se corrigió el contraste para que el texto fuera de cards no se pierda con el degradé.
+- Header y footer quedaron más coherentes con una marca de autoridad tecnológica.
+- Se unificaron botones, pills, cards, sombras, bordes, estados hover y ritmo vertical.
 
-## Copy
-- Reescritura integral del mensaje principal con foco en decisión, riesgo, claridad y autoridad.
-- Mejor explicación de qué resuelve el estudio y para quién sirve.
-- FAQs y secciones orientadas a objeciones reales.
+## Home
+- Se consolidó el hero flagship para que la primera impresión tenga más impacto y autoridad.
+- Se preservó el flujo del contenido, pero con una base visual más premium y consistente.
 
-## Diseño
-- Sistema visual más premium, sobrio y editorial.
-- Mejor espaciado, jerarquía tipográfica y consistencia entre páginas.
-- Hero más sólido, cards más limpias y CTA bands más claras.
+## Páginas clave mejoradas
+### Precio
+- Se reestructuró en 3 niveles de decisión: Cabida Express, Cabida Pro y Cabida Inversión.
+- Se clarificó qué mueve el valor y se reforzó la lógica comercial del CTA.
 
-## Conversión
-- CTA principal unificado en todo el sitio.
-- Página de contacto más robusta y con menor fricción.
-- Microcopy de apoyo para facilitar el primer contacto.
-- Mejor orden de la información en home y páginas SEO.
+### Contacto
+- Se bajó fricción del formulario.
+- Se reforzó el lateral con bloques de “Qué ayuda a partir”, “Qué recibirás” y “Cómo sigue normalmente”.
+- Se ajustó el lenguaje para que el contacto se sienta más simple, serio y útil.
 
-## Técnica
-- Header y footer consistentes.
-- Favicon y metadatos compartidos consistentes.
-- JS de WhatsApp ajustado para respetar textos generados y formulario.
-- CSS centralizado y reforzado para mobile.
+### Estudio / Factibilidad / CIP / Casos
+- Se pulieron titulares, bajadas y etiquetas para aumentar autoridad y consistencia.
 
-
-## Upgrade de sistema visual inspirado en referencia externa
-- Se unificó el lenguaje visual completo con una paleta más tecnológica y autoritaria.
-- Se convirtió el hero de páginas interiores en un shell premium oscuro con bordes luminosos, grilla sutil y visual más cinematográfico.
-- Se elevaron cards, pricing, tablas, formularios, breadcrumbs, CTA bands y footer con una estética consistente de mayor nivel.
-- Se mantuvo el contenido y la estructura, subiendo la percepción de marca y autoridad sin rehacer el stack.
+## Archivos modificados
+- css/style.css
+- index.html
+- precio/index.html
+- contacto/index.html
+- estudio-de-cabida/index.html
+- factibilidad-normativa/index.html
+- como-leer-un-cip/index.html
+- casos/index.html
