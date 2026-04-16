@@ -1249,11 +1249,11 @@ p{margin:0 0 14px}
   .heroFlagship::after,
   .heroFlagship--compact::after{
     background:
-      radial-gradient(420px 280px at 78% 20%, rgba(108,86,255,.22) 0%, rgba(108,86,255,.09) 34%, transparent 72%),
-      radial-gradient(240px 220px at 76% 14%, rgba(78,162,255,.11) 0%, transparent 74%),
+      radial-gradient(420px 280px at 82% 20%, rgba(108,86,255,.22) 0%, rgba(108,86,255,.09) 34%, transparent 72%),
+      radial-gradient(240px 220px at 81% 14%, rgba(78,162,255,.11) 0%, transparent 74%),
       linear-gradient(180deg, rgba(7,17,31,.90) 0%, rgba(7,17,31,.70) 30%, rgba(7,17,31,.56) 60%, rgba(7,17,31,.48) 100%),
-      linear-gradient(90deg, rgba(7,17,31,.94) 0%, rgba(7,17,31,.82) 36%, rgba(7,17,31,.52) 62%, rgba(7,17,31,.18) 84%, rgba(7,17,31,.10) 100%),
-      url('/assets/images/hero-estudio-cabida-santiago.webp') 118% 13%/126% auto no-repeat;
+      linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.84) 38%, rgba(7,17,31,.54) 62%, rgba(7,17,31,.18) 84%, rgba(7,17,31,.10) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 136% 13%/118% auto no-repeat;
   }
 }
 
@@ -1262,10 +1262,10 @@ p{margin:0 0 14px}
   .heroFlagship::after,
   .heroFlagship--compact::after{
     background:
-      radial-gradient(320px 230px at 80% 18%, rgba(108,86,255,.22) 0%, rgba(108,86,255,.09) 36%, transparent 74%),
-      radial-gradient(190px 180px at 79% 12%, rgba(78,162,255,.10) 0%, transparent 74%),
+      radial-gradient(320px 230px at 84% 18%, rgba(108,86,255,.22) 0%, rgba(108,86,255,.09) 36%, transparent 74%),
+      radial-gradient(190px 180px at 84% 12%, rgba(78,162,255,.10) 0%, transparent 74%),
       linear-gradient(180deg, rgba(7,17,31,.92) 0%, rgba(7,17,31,.72) 28%, rgba(7,17,31,.58) 58%, rgba(7,17,31,.50) 100%),
-      linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.84) 38%, rgba(7,17,31,.52) 64%, rgba(7,17,31,.16) 86%, rgba(7,17,31,.08) 100%),
-      url('/assets/images/hero-estudio-cabida-santiago.webp') 122% 12%/132% auto no-repeat;
+      linear-gradient(90deg, rgba(7,17,31,.96) 0%, rgba(7,17,31,.86) 38%, rgba(7,17,31,.56) 64%, rgba(7,17,31,.16) 86%, rgba(7,17,31,.08) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 145% 12%/120% auto no-repeat;
   }
 }
