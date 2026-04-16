@@ -542,3 +542,122 @@ p{margin:0 0 14px}
   .iconBox{width:40px;height:40px;border-radius:14px;font-size:13px;margin-bottom:12px}
   .step__num{width:32px;height:32px;font-size:11px}
 }
+
+
+/* --- Home hero composition refinement --- */
+.heroFlagship--compact{
+  grid-template-columns:minmax(0,1fr) minmax(420px,.92fr);
+  min-height:720px;
+}
+.heroFlagship__copy h1{
+  font-size:clamp(46px,6vw,78px);
+  max-width:9.4ch;
+}
+.heroFlagship__stage{
+  min-height:620px;
+  align-items:stretch;
+  justify-content:flex-end;
+}
+.heroFlagship__image{
+  inset:2% -2% 2% 10%;
+  border-radius:34px;
+  background:linear-gradient(90deg, rgba(7,17,31,.18) 6%, rgba(7,17,31,.04) 28%, rgba(7,17,31,.10) 100%), url('/assets/images/hero-estudio-cabida-santiago.webp') 68% center/cover no-repeat;
+  transform:none;
+  opacity:1;
+  box-shadow:0 36px 80px rgba(0,0,0,.34);
+}
+.heroFlagship__screen{
+  position:absolute;
+  right:2%;
+  bottom:7%;
+  width:min(420px,72%);
+  margin-left:0;
+  background:linear-gradient(180deg, rgba(8,17,34,.90), rgba(10,20,40,.86));
+}
+.heroFlagship__floating--top{top:34px;right:6%;}
+.heroFlagship__floating--bottom{left:auto;right:8%;bottom:18px;}
+
+@media (max-width:1100px){
+  .heroFlagship--compact{grid-template-columns:1fr;min-height:auto;}
+  .heroFlagship__copy h1{font-size:clamp(42px,8vw,68px);max-width:10ch;}
+  .heroFlagship__stage{min-height:500px;}
+  .heroFlagship__image{inset:4% 0 4% 14%;background-position:72% center;}
+  .heroFlagship__screen{right:4%;bottom:5%;width:min(440px,70%);}
+}
+
+@media (max-width:900px){
+  .heroFlagship--compact{padding:22px 18px 18px;}
+  .heroFlagship__copy h1{font-size:clamp(36px,10.8vw,56px);max-width:9.8ch;}
+  .heroFlagship__copy .lead{font-size:16px;max-width:31ch;}
+  .heroFlagship__image{inset:10% -2% 0 26%;background-position:72% center;background-size:cover;opacity:.98;}
+  .heroFlagship__screen{right:2%;bottom:0;width:min(420px,66%);padding:16px;border-radius:22px;}
+  .heroFlagship__screenHead strong{font-size:24px;}
+}
+
+@media (max-width:640px){
+  .heroFlagship{
+    padding:18px 14px 14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .heroFlagship__copy{
+    position:relative;
+    z-index:3;
+    padding:2px 2px 0;
+  }
+  .heroFlagship__copy h1{
+    font-size:clamp(32px,11.5vw,46px);
+    max-width:8.3ch;
+    margin-top:16px;
+  }
+  .heroFlagship__copy .lead{
+    font-size:15px;
+    line-height:1.7;
+    max-width:21ch;
+  }
+  .heroFlagship__stage{
+    position:absolute;
+    inset:0;
+    min-height:0;
+    display:block;
+    margin-top:0;
+    pointer-events:none;
+    z-index:1;
+  }
+  .heroFlagship__halo{width:220px;height:220px;right:-6%;top:24%;filter:blur(30px);opacity:.9;}
+  .heroFlagship__grid,.heroFlagship__floating{display:none;}
+  .heroFlagship__image{
+    display:block;
+    position:absolute;
+    top:180px;
+    right:-86px;
+    left:auto;
+    bottom:120px;
+    width:86%;
+    height:auto;
+    min-height:340px;
+    border-radius:28px;
+    background-position:72% center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-color:transparent;
+    box-shadow:none;
+    opacity:.9;
+    mask-image:linear-gradient(180deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.86) 55%, rgba(0,0,0,.08) 100%);
+    -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.86) 55%, rgba(0,0,0,.08) 100%);
+  }
+  .heroFlagship__screen{
+    position:relative;
+    z-index:3;
+    width:100%;
+    margin-top:26px;
+    margin-left:0;
+    right:auto;
+    bottom:auto;
+    padding:14px;
+    border-radius:20px;
+    background:linear-gradient(180deg, rgba(8,17,34,.96), rgba(10,20,40,.92));
+  }
+  .hero__actions,.hero__actions--flagship{position:relative;z-index:3;}
+  .heroFlagship__trust{position:relative;z-index:3;}
+}
