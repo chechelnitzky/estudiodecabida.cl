@@ -32,3 +32,5 @@
 - factibilidad-normativa/index.html
 - como-leer-un-cip/index.html
 - casos/index.html
+
+- Se rehizo la capa de páginas satélite y comunas para alinearlas con la estrategia comercial y el tono premium del sitio.
