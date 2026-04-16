@@ -1429,3 +1429,32 @@ p{margin:0 0 14px}
     filter:none !important;
   }
 }
+
+/* --- HERO MOBILE FINAL VISIBILITY FIX v11: keep approved placement/scale, but make the image read clearly as the card background --- */
+@media (max-width:640px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(340px 230px at 84% 18%, rgba(110,86,255,.12) 0%, rgba(110,86,255,.05) 34%, transparent 72%),
+      radial-gradient(210px 180px at 82% 16%, rgba(78,162,255,.08) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.56) 0%, rgba(7,17,31,.34) 34%, rgba(7,17,31,.24) 62%, rgba(7,17,31,.28) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.97) 0%, rgba(7,17,31,.92) 32%, rgba(7,17,31,.70) 48%, rgba(7,17,31,.22) 72%, rgba(7,17,31,.02) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right 10px top 118px/46% auto no-repeat;
+    opacity:1 !important;
+    filter:saturate(1.10) brightness(1.18) contrast(1.08) !important;
+  }
+}
+
+@media (max-width:430px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(300px 220px at 84% 18%, rgba(110,86,255,.12) 0%, rgba(110,86,255,.05) 34%, transparent 72%),
+      radial-gradient(190px 170px at 82% 16%, rgba(78,162,255,.08) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.58) 0%, rgba(7,17,31,.36) 34%, rgba(7,17,31,.26) 62%, rgba(7,17,31,.30) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.98) 0%, rgba(7,17,31,.93) 34%, rgba(7,17,31,.72) 50%, rgba(7,17,31,.24) 72%, rgba(7,17,31,.03) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right 8px top 114px/48% auto no-repeat;
+    opacity:1 !important;
+    filter:saturate(1.12) brightness(1.20) contrast(1.08) !important;
+  }
+}
