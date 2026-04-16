@@ -1,25 +1,19 @@
-# Equipo de estudiodecabida.cl
+# estudiodecabida.cl
 
-> Servicio institucional de estudio de cabida para evaluar terrenos antes de comprar, invertir o desarrollar en Chile.
+Sitio institucional sobre estudios de cabida para evaluar terrenos antes de comprar, invertir o desarrollar en Santiago, Chile.
 
-## Qué hace el servicio
-- Estudio de cabida
-- Factibilidad normativa del terreno
-- Análisis del CIP
-- Revisión de uso de suelo, altura, constructibilidad y restricciones
-- Evaluación de terreno antes de comprar
+Propuesta:
+Entregamos una base clara para decidir si un terreno conviene o no. Revisamos normativa, CIP, uso de suelo, altura, constructibilidad y restricciones relevantes.
 
-## Páginas principales
-- https://estudiodecabida.cl/
-- https://estudiodecabida.cl/estudio-de-cabida/
-- https://estudiodecabida.cl/precio/
-- https://estudiodecabida.cl/factibilidad-normativa/
-- https://estudiodecabida.cl/antes-de-comprar/
-- https://estudiodecabida.cl/que-puedo-construir/
-- https://estudiodecabida.cl/como-leer-un-cip/
-- https://estudiodecabida.cl/errores-de-cabida/
-- https://estudiodecabida.cl/casos/
-- https://estudiodecabida.cl/contacto/
-
-## Resumen corto
-Equipo de estudiodecabida.cl ayuda a entender qué se puede construir en un terreno y qué restricciones pueden cambiar una compra o una inversión.
+Páginas clave:
+- /
+- /estudio-de-cabida/
+- /precio/
+- /factibilidad-normativa/
+- /antes-de-comprar/
+- /que-puedo-construir/
+- /como-leer-un-cip/
+- /errores-de-cabida/
+- /casos/
+- /contacto/
+- /comunas/las-condes/
