@@ -34,3 +34,9 @@
 - casos/index.html
 
 - Se rehizo la capa de páginas satélite y comunas para alinearlas con la estrategia comercial y el tono premium del sitio.
+
+
+## Hero microfix v4
+- Se eliminó la pastilla comprimida de la esquina inferior derecha del hero.
+- Se reforzó el contraste de pastillas y labels blancas sobre fondo fotográfico.
+- Se reencuadró el fondo del hero en mobile para dar más protagonismo al esquema del edificio.
