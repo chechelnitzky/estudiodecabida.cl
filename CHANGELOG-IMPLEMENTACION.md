@@ -1,26 +1,32 @@
-# Cambios implementados — upgrade visual tecnológico
+# Resumen de mejoras implementadas
 
-## Qué se corrigió
-- Se rehízo la dirección visual global para mover el sitio desde una estética editorial clara a una estética dark premium, más tecnológica, más cercana a una marca de inteligencia inmobiliaria.
-- Se corrigió el homepage, especialmente el hero, que estaba quedando demasiado plano respecto al objetivo de marca.
+## SEO
+- Titles y meta descriptions reescritos en páginas clave.
+- Canonicals consistentes.
+- Breadcrumbs visibles y con schema.
+- Schema Organization, WebSite, Service y FAQPage donde corresponde.
+- Mayor profundidad de contenido en home y páginas satélite.
+- Nueva página índice de comunas y nuevas páginas locales: Providencia, Vitacura y Lo Barnechea.
+- Sitemap.xml y llms.txt actualizados.
 
-## Archivos modificados
-- `css/style.css`
-- `index.html`
-- `assets/favicon.png`
-- `assets/logo.png`
+## Copy
+- Reescritura integral del mensaje principal con foco en decisión, riesgo, claridad y autoridad.
+- Mejor explicación de qué resuelve el estudio y para quién sirve.
+- FAQs y secciones orientadas a objeciones reales.
 
-## Mejoras visuales
-- Nuevo sistema visual dark con gradientes controlados, glass surfaces, glow técnico y contraste premium.
-- Header más tecnológico con branding más fuerte y navegación más consistente.
-- Cards, pricing, formularios, CTA bands, tablas y footer unificados bajo el nuevo lenguaje visual.
-- Hero home reemplazado por una escena abstracta tecnológica propia del sitio, con animación sutil y mejor impacto above the fold.
-- Se creó un componente adicional de señal / síntesis bajo el hero para reforzar percepción de expertise.
+## Diseño
+- Sistema visual más premium, sobrio y editorial.
+- Mejor espaciado, jerarquía tipográfica y consistencia entre páginas.
+- Hero más sólido, cards más limpias y CTA bands más claras.
 
-## Mejoras de marca
-- Favicon y logo funcionales, coherentes con la nueva dirección visual.
-- Mayor percepción de precisión, sofisticación y autoridad.
+## Conversión
+- CTA principal unificado en todo el sitio.
+- Página de contacto más robusta y con menor fricción.
+- Microcopy de apoyo para facilitar el primer contacto.
+- Mejor orden de la información en home y páginas SEO.
 
-## Mejoras de experiencia
-- Mejoras responsive para que el nuevo look siga funcionando bien en mobile.
-- Se conservaron rutas, estructura y funcionalidad existente.
+## Técnica
+- Header y footer consistentes.
+- Favicon y metadatos compartidos consistentes.
+- JS de WhatsApp ajustado para respetar textos generados y formulario.
+- CSS centralizado y reforzado para mobile.
