@@ -257,12 +257,13 @@ p{margin:0 0 14px}
 .cardLink{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .cardLink:hover{transform:translateY(-3px);border-color:rgba(10,18,32,.16);box-shadow:var(--shadow-lg)}
 .iconBox,.step__num{
-  width:54px;height:54px;border-radius:18px;display:grid;place-items:center;
+  width:46px;height:46px;border-radius:16px;display:grid;place-items:center;
   background:linear-gradient(180deg,#ffffff,#eef2f7);border:1px solid rgba(10,18,32,.08);
-  color:#315f9d;font-weight:900;box-shadow:inset 0 1px 0 rgba(255,255,255,.74)
+  color:#315f9d;font-weight:900;font-size:15px;letter-spacing:-.01em;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.74);margin-bottom:14px;flex-shrink:0
 }
-.step{display:grid;grid-template-columns:auto 1fr;gap:14px}
-.step__num{width:36px;height:36px;border-radius:999px;font-size:13px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.step__num{width:34px;height:34px;border-radius:999px;font-size:12px;margin-bottom:0;margin-top:2px}
 .note,.quoteBox,.formHelp{padding:18px 20px;background:#f7f9fc}
 .quoteBox{display:flex;justify-content:space-between;align-items:center;gap:18px}
 .metricCard{
@@ -533,4 +534,10 @@ p{margin:0 0 14px}
   background:var(--gradient-accent) !important;
   color:#fff !important;
   border-color:transparent !important;
+}
+
+
+@media (max-width: 768px){
+  .iconBox{width:40px;height:40px;border-radius:14px;font-size:13px;margin-bottom:12px}
+  .step__num{width:32px;height:32px;font-size:11px}
 }
