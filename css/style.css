@@ -867,3 +867,301 @@ p{margin:0 0 14px}
     border-radius:18px;
   }
 }
+
+
+/* --- HERO FULL-BLEED BACKGROUND RECOMPOSITION v3 --- */
+.heroFlagship,
+.heroFlagship--compact{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.heroFlagship::before,
+.heroFlagship--compact::before{
+  z-index:1;
+}
+
+.heroFlagship::after,
+.heroFlagship--compact::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(1100px 560px at 74% 52%, rgba(94,70,255,.20) 0%, rgba(94,70,255,.08) 34%, transparent 62%),
+    linear-gradient(90deg,
+      rgba(7,17,31,.96) 0%,
+      rgba(7,17,31,.90) 18%,
+      rgba(7,17,31,.78) 34%,
+      rgba(7,17,31,.54) 50%,
+      rgba(7,17,31,.26) 66%,
+      rgba(7,17,31,.20) 100%),
+    url('/assets/images/hero-estudio-cabida-santiago.webp') 76% center/cover no-repeat;
+  opacity:.98;
+}
+
+.heroFlagship__copy,
+.heroFlagship__stage{
+  position:relative;
+  z-index:2;
+}
+
+.heroFlagship--compact{
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
+  min-height:720px;
+  gap:28px;
+}
+
+.heroFlagship__copy{
+  max-width:650px;
+  padding:20px 8px 20px 8px;
+}
+
+.heroFlagship__copy h1{
+  font-size:clamp(46px,5.9vw,76px);
+  line-height:.95;
+  max-width:9.4ch;
+}
+
+.heroFlagship__copy .lead{
+  max-width:31ch;
+}
+
+.heroFlagship__stage{
+  min-height:650px;
+  display:block;
+}
+
+.heroFlagship__image{
+  display:none;
+}
+
+.heroFlagship__grid{
+  inset:14% 10% 10% 28%;
+  opacity:.16;
+  transform:perspective(1100px) rotateY(-16deg) rotateX(8deg);
+}
+
+.heroFlagship__halo{
+  top:8%;
+  right:6%;
+  width:340px;
+  height:340px;
+  opacity:.9;
+}
+
+.heroFlagship__screen{
+  position:absolute;
+  right:34px;
+  bottom:34px;
+  z-index:3;
+  width:min(392px, calc(100% - 68px));
+  margin:0;
+  padding:20px;
+  border-radius:28px;
+  background:linear-gradient(180deg, rgba(8,17,34,.90), rgba(10,20,40,.86));
+  box-shadow:0 30px 70px rgba(0,0,0,.34);
+}
+
+.heroFlagship__screenGrid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+
+.heroSignal{
+  min-width:0;
+  padding:17px;
+}
+
+.heroSignal strong{
+  font-size:16px;
+  line-height:1.18;
+}
+
+.heroSignal p{
+  font-size:13px;
+  line-height:1.5;
+}
+
+.heroFlagship__floating--top{
+  top:26px;
+  right:28px;
+}
+
+.heroFlagship__floating--bottom{
+  left:auto;
+  right:26px;
+  bottom:24px;
+}
+
+@media (max-width:1200px){
+  .heroFlagship--compact{
+    grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);
+    min-height:690px;
+  }
+
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(950px 500px at 74% 54%, rgba(94,70,255,.18) 0%, rgba(94,70,255,.08) 34%, transparent 62%),
+      linear-gradient(90deg,
+        rgba(7,17,31,.96) 0%,
+        rgba(7,17,31,.90) 22%,
+        rgba(7,17,31,.80) 38%,
+        rgba(7,17,31,.58) 54%,
+        rgba(7,17,31,.28) 70%,
+        rgba(7,17,31,.20) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 80% center/cover no-repeat;
+  }
+
+  .heroFlagship__copy h1{
+    font-size:clamp(42px,5.4vw,68px);
+  }
+
+  .heroFlagship__stage{
+    min-height:600px;
+  }
+
+  .heroFlagship__screen{
+    right:24px;
+    bottom:24px;
+    width:min(372px, calc(100% - 48px));
+    padding:18px;
+  }
+}
+
+@media (max-width:900px){
+  .heroFlagship--compact{
+    grid-template-columns:1fr;
+    min-height:auto;
+    gap:18px;
+  }
+
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(720px 360px at 78% 42%, rgba(94,70,255,.18) 0%, rgba(94,70,255,.07) 32%, transparent 58%),
+      linear-gradient(180deg,
+        rgba(7,17,31,.90) 0%,
+        rgba(7,17,31,.74) 34%,
+        rgba(7,17,31,.56) 56%,
+        rgba(7,17,31,.44) 100%),
+      linear-gradient(90deg,
+        rgba(7,17,31,.88) 0%,
+        rgba(7,17,31,.66) 42%,
+        rgba(7,17,31,.34) 72%,
+        rgba(7,17,31,.24) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 76% 34%/cover no-repeat;
+    opacity:.98;
+  }
+
+  .heroFlagship__copy{
+    max-width:none;
+    padding:8px 2px 0;
+  }
+
+  .heroFlagship__copy h1{
+    font-size:clamp(38px,10vw,56px);
+    max-width:9.5ch;
+  }
+
+  .heroFlagship__copy .lead{
+    max-width:none;
+    font-size:16px;
+  }
+
+  .heroFlagship__stage{
+    min-height:auto;
+    display:block;
+  }
+
+  .heroFlagship__grid,
+  .heroFlagship__floating,
+  .heroFlagship__halo{
+    display:none;
+  }
+
+  .heroFlagship__screen{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    width:100%;
+    margin-top:12px;
+    padding:16px;
+    border-radius:22px;
+    box-shadow:0 20px 38px rgba(0,0,0,.26);
+  }
+}
+
+@media (max-width:640px){
+  .heroFlagship,
+  .heroFlagship--compact{
+    padding:18px 14px 14px;
+    gap:16px;
+  }
+
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(430px 240px at 78% 32%, rgba(94,70,255,.16) 0%, rgba(94,70,255,.05) 32%, transparent 58%),
+      linear-gradient(180deg,
+        rgba(7,17,31,.92) 0%,
+        rgba(7,17,31,.72) 32%,
+        rgba(7,17,31,.60) 60%,
+        rgba(7,17,31,.50) 100%),
+      linear-gradient(90deg,
+        rgba(7,17,31,.92) 0%,
+        rgba(7,17,31,.74) 36%,
+        rgba(7,17,31,.46) 68%,
+        rgba(7,17,31,.28) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 74% 26%/cover no-repeat;
+    opacity:.98;
+  }
+
+  .heroFlagship__copy{
+    z-index:2;
+    padding:2px 2px 0;
+  }
+
+  .heroFlagship__copy h1{
+    font-size:clamp(34px,11.4vw,48px);
+    max-width:8.8ch;
+    margin-top:16px;
+  }
+
+  .heroFlagship__copy .lead{
+    font-size:15px;
+    line-height:1.68;
+  }
+
+  .heroFlagship__stage{
+    margin-top:2px;
+  }
+
+  .heroFlagship__image{
+    display:none;
+  }
+
+  .heroFlagship__screen{
+    width:100%;
+    margin:6px 0 0;
+    padding:14px;
+    border-radius:20px;
+  }
+
+  .heroFlagship__screenHead strong{
+    font-size:22px;
+  }
+
+  .heroFlagship__screenGrid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .heroSignal{
+    padding:14px;
+    border-radius:18px;
+  }
+}
