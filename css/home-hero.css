@@ -1,4 +1,4 @@
-/* Homepage hero rebuilt from scratch: no legacy heroFlagship classes used */
+/* Homepage hero rebuilt professionally: single visual system across desktop, tablet and mobile */
 .homeHeroSection{margin-bottom:32px}
 .homeHero{
   position:relative;
@@ -9,38 +9,31 @@
   border-radius:34px;
   border:1px solid rgba(255,255,255,.08);
   background:
-    linear-gradient(180deg, rgba(6,14,29,.88), rgba(6,14,29,.88)),
-    radial-gradient(circle at 78% 44%, rgba(77,134,255,.22), transparent 34%),
-    linear-gradient(90deg, rgba(5,11,24,.92) 0%, rgba(5,11,24,.82) 34%, rgba(5,11,24,.62) 56%, rgba(5,11,24,.84) 100%);
+    linear-gradient(180deg, rgba(6,14,29,.84), rgba(6,14,29,.88)),
+    radial-gradient(circle at 78% 44%, rgba(77,134,255,.20), transparent 34%),
+    linear-gradient(90deg, rgba(5,11,24,.92) 0%, rgba(5,11,24,.80) 34%, rgba(5,11,24,.58) 56%, rgba(5,11,24,.84) 100%);
   box-shadow:0 24px 70px rgba(0,0,0,.32);
 }
 .homeHero::before{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(90deg, rgba(6,14,29,.78) 0%, rgba(6,14,29,.56) 28%, rgba(6,14,29,.22) 48%, rgba(6,14,29,.46) 70%, rgba(6,14,29,.72) 100%);
-  z-index:1;
-  pointer-events:none;
-}
-.homeHero::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg, rgba(6,14,29,.06) 0%, rgba(6,14,29,.22) 100%);
+  background:
+    linear-gradient(90deg, rgba(6,14,29,.84) 0%, rgba(6,14,29,.68) 28%, rgba(6,14,29,.22) 50%, rgba(6,14,29,.42) 71%, rgba(6,14,29,.70) 100%),
+    linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
   z-index:1;
   pointer-events:none;
 }
 .homeHero__bg{position:absolute; inset:0; z-index:0; pointer-events:none;}
 .homeHero__art{
   position:absolute;
-  right:0;
-  bottom:0;
+  inset:0;
+  width:100%;
   height:100%;
-  width:auto;
+  object-fit:cover;
+  object-position:62% 50%;
   max-width:none;
   display:block;
-  transform-origin:right bottom;
-  transform:translateX(0) scale(1);
   opacity:.97;
   filter:saturate(1.03) brightness(.92);
 }
@@ -149,55 +142,52 @@
   .homeHero{min-height:720px;padding:24px}
   .homeHero__inner{grid-template-columns:minmax(0,1fr) minmax(340px,.84fr);min-height:660px}
   .homeHero__copy h1{font-size:clamp(48px,6.6vw,78px);max-width:8.8ch}
-  .homeHero__art{transform:translateX(4%) scale(.94)}
+  .homeHero__art{object-position:58% 50%}
   .homeHero__panel{width:min(460px,100%);margin-top:138px}
 }
 
 @media (max-width: 980px){
-  .homeHero{min-height:auto;padding:22px}
+  .homeHero{
+    min-height:auto;
+    padding:22px;
+  }
+  .homeHero::before{
+    background:
+      linear-gradient(90deg, rgba(6,14,29,.88) 0%, rgba(6,14,29,.74) 33%, rgba(6,14,29,.26) 58%, rgba(6,14,29,.54) 82%, rgba(6,14,29,.72) 100%),
+      linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
+  }
   .homeHero__inner{grid-template-columns:1fr;gap:18px;min-height:unset}
   .homeHero__copy{
     max-width:640px;
     padding:8px 6px 0;
-    padding-right:min(34vw,260px);
-    min-height:520px;
+    padding-right:min(36vw,270px);
+    min-height:600px;
   }
   .homeHero__panelWrap{justify-content:flex-start;padding:8px 6px 6px}
-  .homeHero__badge{top:18px;right:24px}
+  .homeHero__badge{display:none}
   .homeHero__panel{margin-top:0;width:min(620px,100%)}
   .homeHero__art{
-    top:118px;
-    bottom:auto;
-    right:-2%;
-    width:min(56%,420px);
-    height:auto;
-    transform:none;
-    opacity:.9;
+    object-position:74% 18%;
   }
 }
 
 @media (max-width: 760px){
   .homeHero{padding:18px 16px 20px;border-radius:28px}
-  .homeHero::before{background:linear-gradient(90deg, rgba(6,14,29,.84) 0%, rgba(6,14,29,.66) 34%, rgba(6,14,29,.34) 56%, rgba(6,14,29,.56) 78%, rgba(6,14,29,.76) 100%)}
+  .homeHero::before{
+    background:
+      linear-gradient(90deg, rgba(6,14,29,.90) 0%, rgba(6,14,29,.78) 38%, rgba(6,14,29,.40) 60%, rgba(6,14,29,.60) 82%, rgba(6,14,29,.76) 100%),
+      linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
+  }
   .homeHero__copy{
-    padding-right:min(38vw,210px);
-    min-height:560px;
+    padding-right:min(39vw,190px);
+    min-height:620px;
   }
   .homeHero__copy h1{font-size:clamp(42px,11.5vw,64px);max-width:8.2ch;margin:18px 0 16px}
   .homeHero__lead{max-width:18ch;font-size:16px;line-height:1.66}
   .homeHero__actions{gap:12px}
   .homeHero__actions .btn{width:100%;justify-content:center}
   .homeHero__trust{display:grid;grid-template-columns:1fr;gap:8px}
-  .homeHero__badge{display:none}
-  .homeHero__art{
-    top:132px;
-    bottom:auto;
-    right:-4%;
-    width:min(58%,350px);
-    height:auto;
-    transform:none;
-    opacity:.84;
-  }
+  .homeHero__art{object-position:78% 19%}
   .homeHero__panel{padding:18px;border-radius:22px}
   .homeHero__panelHead strong{font-size:24px;max-width:none}
 }
@@ -205,22 +195,19 @@
 @media (max-width: 560px){
   .homeHero{padding:16px 14px 18px;border-radius:24px}
   .homeHero__kicker{padding:12px 16px;font-size:12px;line-height:1.2}
+  .homeHero::before{
+    background:
+      linear-gradient(90deg, rgba(6,14,29,.92) 0%, rgba(6,14,29,.82) 42%, rgba(6,14,29,.44) 62%, rgba(6,14,29,.62) 84%, rgba(6,14,29,.78) 100%),
+      linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
+  }
   .homeHero__copy{
     padding:2px 2px 0;
-    padding-right:min(40vw,138px);
-    min-height:600px;
+    padding-right:min(42vw,150px);
+    min-height:640px;
   }
   .homeHero__copy h1{font-size:clamp(34px,14vw,56px);max-width:7.8ch;line-height:.96}
   .homeHero__lead{max-width:16ch;font-size:15px;line-height:1.65}
-  .homeHero__art{
-    top:170px;
-    bottom:auto;
-    right:-10%;
-    width:min(64%,300px);
-    height:auto;
-    transform:none;
-    opacity:.8;
-  }
+  .homeHero__art{object-position:81% 18%}
   .homeHero__panelWrap{padding:6px 2px 0}
   .homeHero__panel{padding:16px;border-radius:20px}
   .homeHero__panelGrid{grid-template-columns:1fr}
@@ -229,16 +216,10 @@
 
 @media (max-width: 420px){
   .homeHero__copy{
-    padding-right:min(42vw,128px);
-    min-height:580px;
+    padding-right:min(43vw,140px);
+    min-height:660px;
   }
   .homeHero__copy h1{font-size:clamp(32px,15vw,52px);max-width:7.3ch}
   .homeHero__lead{max-width:15ch}
-  .homeHero__art{
-    top:188px;
-    right:-14%;
-    width:min(66%,280px);
-    height:auto;
-    opacity:.78;
-  }
+  .homeHero__art{object-position:83% 17%}
 }
