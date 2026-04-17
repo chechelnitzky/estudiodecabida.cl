@@ -190,6 +190,9 @@ p{margin:0 0 14px}
   pointer-events:none;z-index:1
 }
 .hero__actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+
+body.internal-page .hero--authority{grid-template-columns:1fr}
+body.internal-page .hero__visual{display:none}
 .hero--flagship{display:block;margin-bottom:32px}
 .heroFlagship{
   position:relative;overflow:hidden;min-height:660px;padding:34px;border-radius:36px;
