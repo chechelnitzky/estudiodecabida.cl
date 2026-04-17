@@ -200,21 +200,10 @@
     min-height:auto;
     padding:16px 14px 18px;
     border-radius:24px;
-    background:
-      linear-gradient(180deg, rgba(6,14,29,.60), rgba(6,14,29,.68)),
-      radial-gradient(circle at 78% 40%, rgba(77,134,255,.12), transparent 34%),
-      linear-gradient(90deg, rgba(5,11,24,.88) 0%, rgba(5,11,24,.66) 30%, rgba(5,11,24,.18) 52%, rgba(5,11,24,.44) 76%, rgba(5,11,24,.64) 100%);
+    background:rgba(128,128,128,.5);
   }
-  .homeHero::before{
-    background:
-      linear-gradient(90deg, rgba(6,14,29,.52) 0%, rgba(6,14,29,.36) 28%, rgba(6,14,29,.06) 54%, rgba(6,14,29,.16) 78%, rgba(6,14,29,.28) 100%),
-      linear-gradient(180deg, rgba(6,14,29,.02) 0%, rgba(6,14,29,.08) 100%);
-  }
-  .homeHero__bg::before{
-    background:url('/assets/images/hero-estudio-cabida-mobile-hd.webp') 62% 42%/cover no-repeat;
-    opacity:.72;
-    transform:none;
-  }
+  .homeHero::before{display:none}
+  .homeHero__bg::before{display:none}
   .homeHero__copy{padding:2px 2px 0}
   .homeHero__kicker{padding:12px 14px;font-size:12px;line-height:1.2;max-width:100%}
   .homeHero__copy h1{max-width:7.8ch;font-size:clamp(34px,13.1vw,54px);line-height:.96;margin:18px 0 14px}
@@ -228,8 +217,7 @@
 }
 
 @media (max-width: 420px){
-  .homeHero{padding:14px 12px 18px;border-radius:22px}
-  .homeHero__bg::before{background-position:60% 42%;opacity:.74}
+  .homeHero{padding:14px 12px 18px;border-radius:22px;background:rgba(128,128,128,.5)}
   .homeHero__copy h1{font-size:clamp(32px,14.2vw,50px);max-width:7.4ch}
   .homeHero__lead{max-width:15ch}
 }
