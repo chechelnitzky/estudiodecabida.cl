@@ -19,6 +19,7 @@
   <link rel="icon" href="/assets/favicon.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/favicon.png" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/home-hero.css" />
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Equipo de estudiodecabida.cl", "url": "https://estudiodecabida.cl/", "logo": "https://estudiodecabida.cl/assets/favicon.png", "image": "https://estudiodecabida.cl/assets/images/hero-estudio-cabida-santiago.webp", "description": "Estudio de cabida, análisis normativo y evaluación de terrenos antes de comprar, invertir o desarrollar en Chile.", "areaServed": {"@type": "Country", "name": "Chile"}, "contactPoint": [{"@type": "ContactPoint", "telephone": "+56-9-7605-2356", "contactType": "sales", "areaServed": "CL", "availableLanguage": ["es", "es-CL"]}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "estudiodecabida.cl", "url": "https://estudiodecabida.cl/", "inLanguage": "es-CL"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://estudiodecabida.cl/"}]}</script>
@@ -45,56 +46,60 @@
 </header>
 <main class="page">
   <div class="wrap wrap--hero">
-    <section class="hero hero--flagship">
-      <div class="heroFlagship heroFlagship--compact">
-        <div class="heroFlagship__copy">
-          <div class="heroFlagship__kicker"><span class="dot"></span> Estudio de cabida para inversión inmobiliaria</div>
-          <h1>Confirma si un terreno conviene antes de invertir</h1>
-          <p class="lead">Analizamos CIP, normativa urbana y restricciones reales para decirte con claridad si conviene avanzar, renegociar o descartar.</p>
-          <div class="hero__actions hero__actions--flagship">
-            <a class="btn btn--primary" href="https://wa.me/56976052356" target="_blank" rel="noopener">Evaluar terreno</a>
-            <a class="btn btn--ghost" href="/estudio-de-cabida/">Cómo funciona</a>
-          </div>
-          <div class="heroFlagship__trust heroFlagship__trust--strong">
-            <span>Antes de comprar</span>
-            <span>Antes de ofertar</span>
-            <span>Antes de diseñar</span>
-            <span>Dirección o rol bastan para comenzar en muchos casos</span>
-          </div>
+    <section class="homeHeroSection">
+      <div class="homeHero" aria-labelledby="home-hero-title">
+        <div class="homeHero__bg" aria-hidden="true">
+          <img class="homeHero__art" src="/assets/images/hero-estudio-cabida-santiago.webp" alt="" />
         </div>
-        <div class="heroFlagship__stage" aria-hidden="true">
-          <div class="heroFlagship__halo"></div>
-          <div class="heroFlagship__grid"></div>
-          <div class="heroFlagship__image"></div>
-          <div class="heroFlagship__screen">
-            <div class="heroFlagship__screenHead">
-              <span class="heroFlagship__screenLabel">Base de decisión antes de invertir</span>
-              <strong>Menos intuición. Más claridad normativa.</strong>
+
+        <div class="homeHero__inner">
+          <div class="homeHero__copy">
+            <div class="homeHero__kicker"><span class="dot"></span> Estudio de cabida para inversión inmobiliaria</div>
+            <h1 id="home-hero-title">Confirma si un terreno conviene antes de invertir</h1>
+            <p class="homeHero__lead">Analizamos CIP, normativa urbana y restricciones reales para decirte con claridad si conviene avanzar, renegociar o descartar.</p>
+            <div class="homeHero__actions">
+              <a class="btn btn--primary" href="https://wa.me/56976052356" target="_blank" rel="noopener">Evaluar terreno</a>
+              <a class="btn btn--ghost" href="/estudio-de-cabida/">Cómo funciona</a>
             </div>
-            <div class="heroFlagship__screenGrid">
-              <article class="heroSignal">
-                <span class="heroSignal__eyebrow">Qué se puede hacer</span>
-                <strong>Uso de suelo y compatibilidades reales</strong>
-                <p>Evita asumir programas que la norma no admite o condiciona.</p>
-              </article>
-              <article class="heroSignal">
-                <span class="heroSignal__eyebrow">Qué no conviene asumir</span>
-                <strong>Altura, constructibilidad y límites críticos</strong>
-                <p>Aterriza el potencial antes de prometer metros o rentabilidad.</p>
-              </article>
-              <article class="heroSignal">
-                <span class="heroSignal__eyebrow">Riesgos</span>
-                <strong>Restricciones que cambian el negocio</strong>
-                <p>Detecta afectaciones o condiciones que pueden bajar el valor real del terreno.</p>
-              </article>
-              <article class="heroSignal heroSignal--accent">
-                <span class="heroSignal__eyebrow">Decisión</span>
-                <strong>Avanzar, renegociar o descartar</strong>
-                <p>La cabida ordena la siguiente jugada con más criterio y menos ruido.</p>
-              </article>
+            <div class="homeHero__trust">
+              <span>Antes de comprar</span>
+              <span>Antes de ofertar</span>
+              <span>Antes de diseñar</span>
+              <span>Dirección o rol bastan para comenzar en muchos casos</span>
             </div>
           </div>
-          <div class="heroFlagship__floating heroFlagship__floating--top">Certeza normativa</div>
+
+          <div class="homeHero__panelWrap">
+            <div class="homeHero__badge">Certeza normativa</div>
+            <div class="homeHero__panel">
+              <div class="homeHero__panelHead">
+                <span class="homeHero__panelLabel">Base de decisión antes de invertir</span>
+                <strong>Menos intuición. Más claridad normativa.</strong>
+              </div>
+              <div class="homeHero__panelGrid">
+                <article class="homeHeroCard">
+                  <span class="homeHeroCard__eyebrow">Qué se puede hacer</span>
+                  <strong>Uso de suelo y compatibilidades reales</strong>
+                  <p>Evita asumir programas que la norma no admite o condiciona.</p>
+                </article>
+                <article class="homeHeroCard">
+                  <span class="homeHeroCard__eyebrow">Qué no conviene asumir</span>
+                  <strong>Altura, constructibilidad y límites críticos</strong>
+                  <p>Aterriza el potencial antes de prometer metros o rentabilidad.</p>
+                </article>
+                <article class="homeHeroCard">
+                  <span class="homeHeroCard__eyebrow">Riesgos</span>
+                  <strong>Restricciones que cambian el negocio</strong>
+                  <p>Detecta afectaciones o condiciones que pueden bajar el valor real del terreno.</p>
+                </article>
+                <article class="homeHeroCard homeHeroCard--accent">
+                  <span class="homeHeroCard__eyebrow">Decisión</span>
+                  <strong>Avanzar, renegociar o descartar</strong>
+                  <p>La cabida ordena la siguiente jugada con más criterio y menos ruido.</p>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
