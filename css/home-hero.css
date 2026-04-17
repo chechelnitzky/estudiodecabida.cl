@@ -1,6 +1,18 @@
-/* Homepage hero rebuilt professionally: single visual system across desktop, tablet and mobile */
+/* Homepage hero: deterministic focal-art system
+   Desktop keeps a cinematic full-card background.
+   Tablet/mobile switch to a top-right anchored asset so the building
+   stays beside the copy instead of sinking behind the lower panel. */
+
 .homeHeroSection{margin-bottom:32px}
+
 .homeHero{
+  --ambient-x:62%;
+  --ambient-y:50%;
+  --asset-top:0px;
+  --asset-right:0px;
+  --asset-width:100%;
+  --asset-opacity:.97;
+  --copy-right-space:0px;
   position:relative;
   overflow:hidden;
   isolation:isolate;
@@ -10,33 +22,55 @@
   border:1px solid rgba(255,255,255,.08);
   background:
     linear-gradient(180deg, rgba(6,14,29,.84), rgba(6,14,29,.88)),
-    radial-gradient(circle at 78% 44%, rgba(77,134,255,.20), transparent 34%),
-    linear-gradient(90deg, rgba(5,11,24,.92) 0%, rgba(5,11,24,.80) 34%, rgba(5,11,24,.58) 56%, rgba(5,11,24,.84) 100%);
+    radial-gradient(circle at 78% 44%, rgba(77,134,255,.18), transparent 34%),
+    linear-gradient(90deg, rgba(5,11,24,.94) 0%, rgba(5,11,24,.84) 34%, rgba(5,11,24,.68) 56%, rgba(5,11,24,.88) 100%);
   box-shadow:0 24px 70px rgba(0,0,0,.32);
 }
+
 .homeHero::before{
   content:"";
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg, rgba(6,14,29,.84) 0%, rgba(6,14,29,.68) 28%, rgba(6,14,29,.22) 50%, rgba(6,14,29,.42) 71%, rgba(6,14,29,.70) 100%),
-    linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
+    linear-gradient(90deg, rgba(6,14,29,.86) 0%, rgba(6,14,29,.72) 28%, rgba(6,14,29,.22) 50%, rgba(6,14,29,.46) 71%, rgba(6,14,29,.74) 100%),
+    linear-gradient(180deg, rgba(6,14,29,.05) 0%, rgba(6,14,29,.16) 100%);
   z-index:1;
   pointer-events:none;
 }
-.homeHero__bg{position:absolute; inset:0; z-index:0; pointer-events:none;}
-.homeHero__art{
+
+.homeHero__bg{
   position:absolute;
   inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:62% 50%;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+/* ambient full-card read so the hero still feels like one background */
+.homeHero__bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url('/assets/images/hero-estudio-cabida-santiago.webp');
+  background-size:cover;
+  background-position:var(--ambient-x) var(--ambient-y);
+  opacity:.42;
+  transform:scale(1.02);
+}
+
+/* focal asset that we can anchor with real coordinates */
+.homeHero__art{
+  position:absolute;
+  top:var(--asset-top);
+  right:var(--asset-right);
+  width:var(--asset-width);
+  height:auto;
   max-width:none;
   display:block;
-  opacity:.97;
+  opacity:var(--asset-opacity);
   filter:saturate(1.03) brightness(.92);
 }
+
 .homeHero__inner{
   position:relative;
   z-index:2;
@@ -46,13 +80,16 @@
   align-items:stretch;
   min-height:704px;
 }
+
 .homeHero__copy{
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
   max-width:680px;
   padding:18px 12px 12px;
+  padding-right:calc(12px + var(--copy-right-space));
 }
+
 .homeHero__kicker{
   display:inline-flex;
   align-items:center;
@@ -69,6 +106,7 @@
   backdrop-filter:blur(12px);
 }
 .homeHero__kicker .dot{width:9px;height:9px;border-radius:999px;background:#5877ff;box-shadow:0 0 0 6px rgba(88,119,255,.16)}
+
 .homeHero__copy h1{
   margin:22px 0 18px;
   font-size:clamp(56px,6.9vw,88px);
@@ -77,6 +115,7 @@
   max-width:8.5ch;
   color:#fff;
 }
+
 .homeHero__lead{
   margin:0;
   max-width:32ch;
@@ -84,6 +123,7 @@
   font-size:17px;
   line-height:1.72;
 }
+
 .homeHero__actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
 .homeHero__trust{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;max-width:700px}
 .homeHero__trust span{
@@ -96,6 +136,7 @@
   font-weight:700;
 }
 .homeHero__trust span:last-child{background:rgba(124,92,255,.12);border-color:rgba(124,92,255,.22);color:#fff}
+
 .homeHero__panelWrap{
   position:relative;
   display:flex;
@@ -103,6 +144,7 @@
   justify-content:flex-end;
   padding:18px 12px 12px;
 }
+
 .homeHero__badge{
   position:absolute;
   top:26px;
@@ -117,6 +159,7 @@
   box-shadow:0 18px 30px rgba(0,0,0,.22);
   backdrop-filter:blur(12px);
 }
+
 .homeHero__panel{
   position:relative;
   z-index:2;
@@ -142,72 +185,87 @@
   .homeHero{min-height:720px;padding:24px}
   .homeHero__inner{grid-template-columns:minmax(0,1fr) minmax(340px,.84fr);min-height:660px}
   .homeHero__copy h1{font-size:clamp(48px,6.6vw,78px);max-width:8.8ch}
-  .homeHero__art{object-position:58% 50%}
   .homeHero__panel{width:min(460px,100%);margin-top:138px}
 }
 
+/* Key breakpoint: stop using full-height cover behavior.
+   Anchor the art by coordinates so it stays beside the text. */
 @media (max-width: 980px){
   .homeHero{
+    --ambient-x:72%;
+    --ambient-y:20%;
+    --asset-top:112px;
+    --asset-right:-18px;
+    --asset-width:min(58vw, 430px);
+    --copy-right-space:clamp(150px, 39vw, 270px);
     min-height:auto;
     padding:22px;
   }
   .homeHero::before{
     background:
-      linear-gradient(90deg, rgba(6,14,29,.88) 0%, rgba(6,14,29,.74) 33%, rgba(6,14,29,.26) 58%, rgba(6,14,29,.54) 82%, rgba(6,14,29,.72) 100%),
+      linear-gradient(90deg, rgba(6,14,29,.90) 0%, rgba(6,14,29,.82) 38%, rgba(6,14,29,.52) 58%, rgba(6,14,29,.58) 78%, rgba(6,14,29,.72) 100%),
       linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
   }
   .homeHero__inner{grid-template-columns:1fr;gap:18px;min-height:unset}
   .homeHero__copy{
-    max-width:640px;
+    max-width:680px;
     padding:8px 6px 0;
-    padding-right:min(36vw,270px);
-    min-height:600px;
+    min-height:560px;
   }
   .homeHero__panelWrap{justify-content:flex-start;padding:8px 6px 6px}
   .homeHero__badge{display:none}
   .homeHero__panel{margin-top:0;width:min(620px,100%)}
-  .homeHero__art{
-    object-position:74% 18%;
-  }
 }
 
 @media (max-width: 760px){
-  .homeHero{padding:18px 16px 20px;border-radius:28px}
+  .homeHero{
+    --ambient-x:76%;
+    --ambient-y:18%;
+    --asset-top:124px;
+    --asset-right:-12px;
+    --asset-width:min(56vw, 350px);
+    --copy-right-space:clamp(120px, 42vw, 210px);
+    padding:18px 16px 20px;
+    border-radius:28px;
+  }
   .homeHero::before{
     background:
-      linear-gradient(90deg, rgba(6,14,29,.90) 0%, rgba(6,14,29,.78) 38%, rgba(6,14,29,.40) 60%, rgba(6,14,29,.60) 82%, rgba(6,14,29,.76) 100%),
+      linear-gradient(90deg, rgba(6,14,29,.93) 0%, rgba(6,14,29,.86) 40%, rgba(6,14,29,.60) 60%, rgba(6,14,29,.64) 82%, rgba(6,14,29,.78) 100%),
       linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
   }
-  .homeHero__copy{
-    padding-right:min(39vw,190px);
-    min-height:620px;
-  }
+  .homeHero__copy{min-height:540px}
   .homeHero__copy h1{font-size:clamp(42px,11.5vw,64px);max-width:8.2ch;margin:18px 0 16px}
   .homeHero__lead{max-width:18ch;font-size:16px;line-height:1.66}
   .homeHero__actions{gap:12px}
   .homeHero__actions .btn{width:100%;justify-content:center}
   .homeHero__trust{display:grid;grid-template-columns:1fr;gap:8px}
-  .homeHero__art{object-position:78% 19%}
   .homeHero__panel{padding:18px;border-radius:22px}
   .homeHero__panelHead strong{font-size:24px;max-width:none}
 }
 
 @media (max-width: 560px){
-  .homeHero{padding:16px 14px 18px;border-radius:24px}
+  .homeHero{
+    --ambient-x:80%;
+    --ambient-y:16%;
+    --asset-top:136px;
+    --asset-right:-8px;
+    --asset-width:min(54vw, 292px);
+    --copy-right-space:clamp(92px, 44vw, 160px);
+    padding:16px 14px 18px;
+    border-radius:24px;
+  }
   .homeHero__kicker{padding:12px 16px;font-size:12px;line-height:1.2}
   .homeHero::before{
     background:
-      linear-gradient(90deg, rgba(6,14,29,.92) 0%, rgba(6,14,29,.82) 42%, rgba(6,14,29,.44) 62%, rgba(6,14,29,.62) 84%, rgba(6,14,29,.78) 100%),
+      linear-gradient(90deg, rgba(6,14,29,.95) 0%, rgba(6,14,29,.89) 44%, rgba(6,14,29,.66) 64%, rgba(6,14,29,.70) 84%, rgba(6,14,29,.82) 100%),
       linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.16) 100%);
   }
   .homeHero__copy{
     padding:2px 2px 0;
-    padding-right:min(42vw,150px);
-    min-height:640px;
+    min-height:580px;
   }
   .homeHero__copy h1{font-size:clamp(34px,14vw,56px);max-width:7.8ch;line-height:.96}
   .homeHero__lead{max-width:16ch;font-size:15px;line-height:1.65}
-  .homeHero__art{object-position:81% 18%}
   .homeHero__panelWrap{padding:6px 2px 0}
   .homeHero__panel{padding:16px;border-radius:20px}
   .homeHero__panelGrid{grid-template-columns:1fr}
@@ -215,11 +273,15 @@
 }
 
 @media (max-width: 420px){
-  .homeHero__copy{
-    padding-right:min(43vw,140px);
-    min-height:660px;
+  .homeHero{
+    --ambient-x:82%;
+    --ambient-y:16%;
+    --asset-top:142px;
+    --asset-right:-6px;
+    --asset-width:min(55vw, 250px);
+    --copy-right-space:clamp(84px, 45vw, 148px);
   }
+  .homeHero__copy{min-height:600px}
   .homeHero__copy h1{font-size:clamp(32px,15vw,52px);max-width:7.3ch}
   .homeHero__lead{max-width:15ch}
-  .homeHero__art{object-position:83% 17%}
 }
