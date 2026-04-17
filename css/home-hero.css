@@ -267,56 +267,45 @@
 
 @media (max-width: 560px){
   .homeHero{
-    --ambient-x:74%;
-    --ambient-y:34%;
+    min-height:auto;
     padding:16px 14px 18px;
     border-radius:24px;
+    background:
+      linear-gradient(180deg, rgba(6,14,29,.68), rgba(6,14,29,.76)),
+      radial-gradient(circle at 78% 34%, rgba(77,134,255,.16), transparent 34%),
+      linear-gradient(90deg, rgba(5,11,24,.92) 0%, rgba(5,11,24,.80) 34%, rgba(5,11,24,.58) 62%, rgba(5,11,24,.72) 100%);
   }
   .homeHero::before{
     background:
-      linear-gradient(90deg, rgba(6,14,29,.96) 0%, rgba(6,14,29,.92) 46%, rgba(6,14,29,.70) 67%, rgba(6,14,29,.80) 100%),
-      linear-gradient(180deg, rgba(6,14,29,.06) 0%, rgba(6,14,29,.18) 100%);
+      linear-gradient(90deg, rgba(6,14,29,.62) 0%, rgba(6,14,29,.52) 34%, rgba(6,14,29,.18) 58%, rgba(6,14,29,.34) 100%),
+      linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.14) 100%);
   }
   .homeHero__bg::before{
-    opacity:.26;
-    background-position:74% 34%;
-    transform:scale(1.03);
-  }
-  .homeHero__bg::after{
-    content:"";
-    position:absolute;
-    top:138px;
-    right:10px;
-    width:min(54vw, 250px);
-    aspect-ratio:0.82 / 1;
-    background-image:url('/assets/images/hero-estudio-cabida-santiago.webp');
-    background-repeat:no-repeat;
-    background-size:auto 100%;
-    background-position:78% 38%;
-    opacity:.96;
-    filter:brightness(.98) saturate(1.02);
+    background-image:url('/assets/images/hero-estudio-cabida-mobile-crop.webp');
+    background-size:cover;
+    background-position:74% 0%;
+    opacity:.92;
+    transform:none;
   }
   .homeHero__art{display:none;}
-  .homeHero__kicker{padding:12px 14px;font-size:12px;line-height:1.2}
   .homeHero__copy{
     padding:2px 2px 0;
-    min-height:610px;
+    min-height:0;
   }
-  .homeHero__kicker,
-  .homeHero__copy h1{
-    max-width:calc(100% - min(48vw, 220px));
+  .homeHero__kicker{
+    padding:12px 14px;
+    font-size:12px;
+    line-height:1.2;
+    max-width:calc(100% - 20px);
   }
   .homeHero__copy h1{
+    max-width:6.2ch;
     font-size:clamp(34px,13.8vw,54px);
     line-height:.96;
-    margin-bottom:18px;
+    margin:18px 0 14px;
   }
-  .homeHero__lead{
-    max-width:14ch;
-    font-size:15px;
-    line-height:1.62;
-  }
-  .homeHero__actions{grid-template-columns:1fr; width:100%; max-width:none;}
+  .homeHero__lead{max-width:14ch;font-size:15px;line-height:1.62}
+  .homeHero__actions{grid-template-columns:1fr}
   .homeHero__trust{grid-template-columns:1fr;gap:8px}
   .homeHero__panelWrap{padding:6px 2px 0}
   .homeHero__panel{padding:16px;border-radius:20px}
@@ -326,18 +315,19 @@
 
 @media (max-width: 420px){
   .homeHero{
-    --ambient-x:76%;
-    --ambient-y:33%;
+    padding:14px 12px 18px;
+    border-radius:22px;
   }
-  .homeHero__bg::after{
-    top:146px;
-    right:8px;
-    width:min(56vw, 230px);
-    background-position:79% 38%;
+  .homeHero::before{
+    background:
+      linear-gradient(90deg, rgba(6,14,29,.64) 0%, rgba(6,14,29,.54) 36%, rgba(6,14,29,.16) 60%, rgba(6,14,29,.32) 100%),
+      linear-gradient(180deg, rgba(6,14,29,.03) 0%, rgba(6,14,29,.12) 100%);
   }
-  .homeHero__copy{min-height:600px}
-  .homeHero__kicker,
-  .homeHero__copy h1{max-width:calc(100% - 118px)}
-  .homeHero__copy h1{font-size:clamp(32px,14.5vw,50px)}
+  .homeHero__bg::before{
+    background-position:76% 0%;
+    opacity:.94;
+  }
+  .homeHero__kicker{max-width:100%;}
+  .homeHero__copy h1{font-size:clamp(32px,14.5vw,50px);max-width:6.1ch}
   .homeHero__lead{max-width:13ch}
 }
