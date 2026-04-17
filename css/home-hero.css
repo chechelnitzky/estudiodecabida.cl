@@ -200,7 +200,7 @@
     min-height:auto;
     padding:16px 14px 18px;
     border-radius:24px;
-    background:    linear-gradient(180deg, rgba(112,118,128,.46) 0%, rgba(106,112,122,.40) 48%, rgba(96,102,112,.28) 100%),    linear-gradient(180deg, rgba(7,12,22,.10) 0%, rgba(7,12,22,.22) 62%, rgba(7,12,22,.42) 100%),    url('/assets/images/hero-estudio-cabida-mobile-gray-bg.webp') 64% 52%/cover no-repeat;
+    background:    linear-gradient(180deg, rgba(112,118,128,.32) 0%, rgba(106,112,122,.28) 48%, rgba(96,102,112,.20) 100%),    linear-gradient(180deg, rgba(7,12,22,.07) 0%, rgba(7,12,22,.15) 62%, rgba(7,12,22,.29) 100%),    url('/assets/images/hero-estudio-cabida-mobile-gray-bg.webp') 64% 52%/cover no-repeat;
   }
   .homeHero::before{display:none}
   .homeHero__bg::before{display:none}
@@ -218,8 +218,8 @@
 
 @media (max-width: 420px){
   .homeHero{padding:14px 12px 18px;border-radius:22px;background:
-    linear-gradient(180deg, rgba(112,118,128,.46) 0%, rgba(106,112,122,.40) 48%, rgba(96,102,112,.28) 100%),
-    linear-gradient(180deg, rgba(7,12,22,.10) 0%, rgba(7,12,22,.22) 62%, rgba(7,12,22,.42) 100%),
+    linear-gradient(180deg, rgba(112,118,128,.32) 0%, rgba(106,112,122,.28) 48%, rgba(96,102,112,.20) 100%),
+    linear-gradient(180deg, rgba(7,12,22,.07) 0%, rgba(7,12,22,.15) 62%, rgba(7,12,22,.29) 100%),
     url('/assets/images/hero-estudio-cabida-mobile-gray-bg.webp') 64% 52%/cover no-repeat;}
   .homeHero__copy h1{font-size:clamp(32px,14.2vw,50px);max-width:7.4ch}
   .homeHero__lead{max-width:15ch}
