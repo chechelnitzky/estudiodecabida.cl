@@ -1243,286 +1243,599 @@ p{margin:0 0 14px}
   }
 }
 
-/* --- HERO RECOMPOSED CLEAN FIX: single background system across desktop → mobile --- */
-.heroFlagship,
-.heroFlagship--compact{
-  position:relative;
-  overflow:hidden;
-  isolation:isolate;
-}
 
-.heroFlagship::before,
-.heroFlagship--compact::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  pointer-events:none;
-  opacity:1;
-  background:
-    radial-gradient(1100px 560px at 74% 52%, rgba(94,70,255,.20) 0%, rgba(94,70,255,.08) 34%, transparent 62%),
-    linear-gradient(90deg,
-      rgba(7,17,31,.96) 0%,
-      rgba(7,17,31,.90) 18%,
-      rgba(7,17,31,.78) 34%,
-      rgba(7,17,31,.54) 50%,
-      rgba(7,17,31,.26) 66%,
-      rgba(7,17,31,.20) 100%),
-    url('/assets/images/hero-estudio-cabida-santiago.webp') 76% center/cover no-repeat;
-}
-
-.heroFlagship::after,
-.heroFlagship--compact::after{
-  content:none !important;
-}
-
-.heroFlagship__copy,
-.heroFlagship__stage,
-.heroFlagship__screen,
-.heroFlagship__floating{
-  position:relative;
-  z-index:2;
-}
-
-.heroFlagship--compact{
-  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
-  min-height:720px;
-  gap:28px;
-}
-
-.heroFlagship__copy{
-  max-width:650px;
-  padding:20px 8px 20px 8px;
-}
-
-.heroFlagship__copy h1{
-  font-size:clamp(46px,5.9vw,76px);
-  line-height:.95;
-  max-width:9.4ch;
-}
-
-.heroFlagship__copy .lead{
-  max-width:31ch;
-}
-
-.heroFlagship__stage{
-  min-height:650px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:flex-end;
-}
-
-.heroFlagship__image{
-  display:none !important;
-}
-
-.heroFlagship__grid{
-  inset:14% 10% 10% 28%;
-  opacity:.16;
-  transform:perspective(1100px) rotateY(-16deg) rotateX(8deg);
-}
-
-.heroFlagship__halo{
-  top:8%;
-  right:6%;
-  width:340px;
-  height:340px;
-  opacity:.9;
-}
-
-.heroFlagship__screen{
-  width:min(392px, calc(100% - 68px));
-  margin:0 34px 34px 0;
-  padding:20px;
-  border-radius:28px;
-  background:linear-gradient(180deg, rgba(8,17,34,.90), rgba(10,20,40,.86));
-  box-shadow:0 30px 70px rgba(0,0,0,.34);
-}
-
-.heroFlagship__screenGrid{
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:14px;
-}
-
-.heroSignal{
-  min-width:0;
-  padding:17px;
-}
-
-.heroSignal strong{
-  font-size:16px;
-  line-height:1.18;
-}
-
-.heroSignal p{
-  font-size:13px;
-  line-height:1.5;
-}
-
-.heroFlagship__floating--top{
-  top:26px;
-  right:28px;
-}
-
-.heroFlagship__floating--bottom{
-  left:auto;
-  right:26px;
-  bottom:24px;
-}
-
-@media (max-width:1200px){
-  .heroFlagship--compact{
-    grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);
-    min-height:690px;
-  }
-
-  .heroFlagship::before,
-  .heroFlagship--compact::before{
-    background:
-      radial-gradient(950px 500px at 74% 54%, rgba(94,70,255,.18) 0%, rgba(94,70,255,.08) 34%, transparent 62%),
-      linear-gradient(90deg,
-        rgba(7,17,31,.96) 0%,
-        rgba(7,17,31,.90) 22%,
-        rgba(7,17,31,.80) 38%,
-        rgba(7,17,31,.58) 54%,
-        rgba(7,17,31,.28) 70%,
-        rgba(7,17,31,.20) 100%),
-      url('/assets/images/hero-estudio-cabida-santiago.webp') 80% center/cover no-repeat;
-  }
-
-  .heroFlagship__copy h1{
-    font-size:clamp(42px,5.4vw,68px);
-  }
-
-  .heroFlagship__stage{
-    min-height:600px;
-  }
-
-  .heroFlagship__screen{
-    width:min(372px, calc(100% - 48px));
-    margin:0 24px 24px 0;
-    padding:18px;
-  }
-}
-
+/* --- HERO MICROFIX v5: clearer mobile building focus + concise copy support --- */
 @media (max-width:900px){
-  .heroFlagship--compact{
-    grid-template-columns:1fr;
-    min-height:auto;
-    gap:18px;
-    padding:22px 18px 18px;
-  }
-
-  .heroFlagship::before,
-  .heroFlagship--compact::before{
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
     background:
-      radial-gradient(720px 360px at 78% 42%, rgba(94,70,255,.18) 0%, rgba(94,70,255,.07) 32%, transparent 58%),
-      linear-gradient(180deg,
-        rgba(7,17,31,.90) 0%,
-        rgba(7,17,31,.74) 34%,
-        rgba(7,17,31,.56) 56%,
-        rgba(7,17,31,.44) 100%),
-      linear-gradient(90deg,
-        rgba(7,17,31,.88) 0%,
-        rgba(7,17,31,.66) 42%,
-        rgba(7,17,31,.34) 72%,
-        rgba(7,17,31,.24) 100%),
-      url('/assets/images/hero-estudio-cabida-santiago.webp') 76% 34%/cover no-repeat;
-  }
-
-  .heroFlagship__copy{
-    max-width:none;
-    padding:8px 2px 0;
-  }
-
-  .heroFlagship__copy h1{
-    font-size:clamp(38px,10vw,56px);
-    max-width:9.5ch;
-  }
-
-  .heroFlagship__copy .lead{
-    max-width:none;
-    font-size:16px;
-  }
-
-  .heroFlagship__stage{
-    min-height:240px;
-    display:flex;
-    align-items:flex-end;
-    justify-content:stretch;
-  }
-
-  .heroFlagship__grid,
-  .heroFlagship__floating,
-  .heroFlagship__halo{
-    display:none;
-  }
-
-  .heroFlagship__screen{
-    width:100%;
-    margin:0;
-    padding:16px;
-    border-radius:22px;
-    box-shadow:0 20px 38px rgba(0,0,0,.26);
+      radial-gradient(420px 280px at 82% 20%, rgba(108,86,255,.22) 0%, rgba(108,86,255,.09) 34%, transparent 72%),
+      radial-gradient(240px 220px at 81% 14%, rgba(78,162,255,.11) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.90) 0%, rgba(7,17,31,.70) 30%, rgba(7,17,31,.56) 60%, rgba(7,17,31,.48) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.84) 38%, rgba(7,17,31,.54) 62%, rgba(7,17,31,.18) 84%, rgba(7,17,31,.10) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 136% 13%/118% auto no-repeat;
   }
 }
 
 @media (max-width:640px){
-  .heroFlagship,
-  .heroFlagship--compact{
-    padding:18px 14px 14px;
-    gap:16px;
+  .heroFlagship__copy h1{max-width:8.6ch;}
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(320px 230px at 84% 18%, rgba(108,86,255,.22) 0%, rgba(108,86,255,.09) 36%, transparent 74%),
+      radial-gradient(190px 180px at 84% 12%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.92) 0%, rgba(7,17,31,.72) 28%, rgba(7,17,31,.58) 58%, rgba(7,17,31,.50) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.96) 0%, rgba(7,17,31,.86) 38%, rgba(7,17,31,.56) 64%, rgba(7,17,31,.16) 86%, rgba(7,17,31,.08) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 145% 12%/120% auto no-repeat;
+  }
+}
+
+
+/* --- HERO MOBILE POSITIONING FIX v7: place building to the right of the H1 --- */
+@media (max-width:640px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(360px 240px at 84% 16%, rgba(110,86,255,.16) 0%, rgba(110,86,255,.08) 34%, transparent 72%),
+      radial-gradient(220px 190px at 82% 14%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.94) 0%, rgba(7,17,31,.74) 30%, rgba(7,17,31,.60) 58%, rgba(7,17,31,.52) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.97) 0%, rgba(7,17,31,.92) 30%, rgba(7,17,31,.68) 54%, rgba(7,17,31,.24) 80%, rgba(7,17,31,.10) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 126% 20%/152% auto no-repeat;
+    opacity:.98;
   }
 
   .heroFlagship::before,
   .heroFlagship--compact::before{
+    content:"";
+    position:absolute;
+    inset:auto 10px auto auto;
+    top:122px;
+    width:min(46vw, 178px);
+    height:min(78vw, 332px);
+    z-index:1;
+    pointer-events:none;
+    opacity:.98;
+    border-radius:24px;
     background:
-      radial-gradient(430px 240px at 78% 32%, rgba(94,70,255,.16) 0%, rgba(94,70,255,.05) 32%, transparent 58%),
-      linear-gradient(180deg,
-        rgba(7,17,31,.92) 0%,
-        rgba(7,17,31,.72) 32%,
-        rgba(7,17,31,.60) 60%,
-        rgba(7,17,31,.50) 100%),
-      linear-gradient(90deg,
-        rgba(7,17,31,.92) 0%,
-        rgba(7,17,31,.74) 36%,
-        rgba(7,17,31,.46) 68%,
-        rgba(7,17,31,.28) 100%),
-      url('/assets/images/hero-estudio-cabida-santiago.webp') 74% 26%/cover no-repeat;
-  }
-
-  .heroFlagship__copy{
-    padding:2px 2px 0;
+      linear-gradient(180deg, rgba(7,17,31,.04) 0%, rgba(7,17,31,.16) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') center top/cover no-repeat;
+    box-shadow:none;
+    mask-image:linear-gradient(180deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.94) 82%, rgba(0,0,0,.16) 100%);
+    -webkit-mask-image:linear-gradient(180deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.94) 82%, rgba(0,0,0,.16) 100%);
   }
 
   .heroFlagship__copy h1{
-    font-size:clamp(34px,11.4vw,48px);
-    max-width:8.8ch;
-    margin-top:16px;
+    max-width:7.6ch;
   }
 
   .heroFlagship__copy .lead{
-    font-size:15px;
-    line-height:1.68;
+    max-width:19ch;
+  }
+}
+
+@media (max-width:430px){
+  .heroFlagship::before,
+  .heroFlagship--compact::before{
+    top:116px;
+    right:8px;
+    width:44vw;
+    height:78vw;
+    border-radius:22px;
+  }
+}
+
+/* --- HERO MOBILE POSITIONING FIX v8: use the right-side building as the only hero image on mobile --- */
+@media (max-width:640px){
+  .heroFlagship::before,
+  .heroFlagship--compact::before{
+    content:none !important;
+    display:none !important;
+    background:none !important;
+  }
+
+  .heroFlagship__image{
+    display:none !important;
+  }
+
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(360px 240px at 84% 18%, rgba(110,86,255,.16) 0%, rgba(110,86,255,.08) 34%, transparent 72%),
+      radial-gradient(220px 190px at 82% 16%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.76) 34%, rgba(7,17,31,.62) 62%, rgba(7,17,31,.54) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.97) 0%, rgba(7,17,31,.94) 34%, rgba(7,17,31,.78) 52%, rgba(7,17,31,.46) 72%, rgba(7,17,31,.22) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right 10px top 118px/46% auto no-repeat;
+    opacity:.98;
+  }
+}
+
+@media (max-width:430px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(300px 220px at 84% 18%, rgba(110,86,255,.16) 0%, rgba(110,86,255,.08) 34%, transparent 72%),
+      radial-gradient(190px 170px at 82% 16%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.96) 0%, rgba(7,17,31,.78) 34%, rgba(7,17,31,.64) 62%, rgba(7,17,31,.56) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.98) 0%, rgba(7,17,31,.95) 36%, rgba(7,17,31,.80) 54%, rgba(7,17,31,.46) 72%, rgba(7,17,31,.24) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right 8px top 114px/48% auto no-repeat;
+  }
+}
+
+/* --- HERO MOBILE VISIBILITY FIX v9: keep the right-side composition but raise image clarity --- */
+@media (max-width:640px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(300px 220px at 83% 18%, rgba(110,86,255,.10) 0%, rgba(110,86,255,.04) 36%, transparent 74%),
+      radial-gradient(170px 150px at 81% 15%, rgba(78,162,255,.06) 0%, transparent 72%),
+      linear-gradient(180deg, rgba(7,17,31,.30) 0%, rgba(7,17,31,.20) 34%, rgba(7,17,31,.24) 66%, rgba(7,17,31,.32) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.94) 0%, rgba(7,17,31,.90) 28%, rgba(7,17,31,.70) 46%, rgba(7,17,31,.26) 72%, rgba(7,17,31,.08) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') 126% 20%/152% auto no-repeat;
+    opacity:1;
+    filter:saturate(1.08) brightness(1.08) contrast(1.04);
+  }
+}
+
+@media (max-width:430px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(280px 205px at 84% 18%, rgba(110,86,255,.10) 0%, rgba(110,86,255,.04) 36%, transparent 74%),
+      radial-gradient(150px 135px at 82% 15%, rgba(78,162,255,.06) 0%, transparent 72%),
+      linear-gradient(180deg, rgba(7,17,31,.32) 0%, rgba(7,17,31,.22) 34%, rgba(7,17,31,.26) 66%, rgba(7,17,31,.34) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.91) 30%, rgba(7,17,31,.72) 48%, rgba(7,17,31,.28) 72%, rgba(7,17,31,.08) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') 130% 18%/156% auto no-repeat;
+    opacity:1;
+    filter:saturate(1.1) brightness(1.1) contrast(1.05);
+  }
+}
+
+/* --- HERO MOBILE BACKGROUND BLEND FIX v10: keep approved v8 position/scale, but blend as full-card background --- */
+@media (max-width:640px){
+  .heroFlagship::before,
+  .heroFlagship--compact::before{
+    content:none !important;
+    display:none !important;
+    background:none !important;
+  }
+
+  .heroFlagship__image{
+    display:none !important;
+  }
+
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(340px 230px at 84% 18%, rgba(110,86,255,.15) 0%, rgba(110,86,255,.07) 34%, transparent 72%),
+      radial-gradient(210px 180px at 82% 16%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.84) 0%, rgba(7,17,31,.62) 34%, rgba(7,17,31,.50) 62%, rgba(7,17,31,.44) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.97) 0%, rgba(7,17,31,.94) 34%, rgba(7,17,31,.78) 52%, rgba(7,17,31,.40) 72%, rgba(7,17,31,.16) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile-faded.webp') right 10px top 118px/46% auto no-repeat;
+    opacity:1 !important;
+    filter:none !important;
+  }
+}
+
+@media (max-width:430px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(300px 220px at 84% 18%, rgba(110,86,255,.15) 0%, rgba(110,86,255,.07) 34%, transparent 72%),
+      radial-gradient(190px 170px at 82% 16%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.86) 0%, rgba(7,17,31,.64) 34%, rgba(7,17,31,.52) 62%, rgba(7,17,31,.46) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.98) 0%, rgba(7,17,31,.95) 36%, rgba(7,17,31,.80) 54%, rgba(7,17,31,.42) 72%, rgba(7,17,31,.18) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile-faded.webp') right 8px top 114px/48% auto no-repeat;
+    opacity:1 !important;
+    filter:none !important;
+  }
+}
+
+/* --- HERO MOBILE FINAL VISIBILITY FIX v11: keep approved placement/scale, but make the image read clearly as the card background --- */
+@media (max-width:640px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(340px 230px at 84% 18%, rgba(110,86,255,.12) 0%, rgba(110,86,255,.05) 34%, transparent 72%),
+      radial-gradient(210px 180px at 82% 16%, rgba(78,162,255,.08) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.56) 0%, rgba(7,17,31,.34) 34%, rgba(7,17,31,.24) 62%, rgba(7,17,31,.28) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.97) 0%, rgba(7,17,31,.92) 32%, rgba(7,17,31,.70) 48%, rgba(7,17,31,.22) 72%, rgba(7,17,31,.02) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right 10px top 118px/46% auto no-repeat;
+    opacity:1 !important;
+    filter:saturate(1.10) brightness(1.18) contrast(1.08) !important;
+  }
+}
+
+@media (max-width:430px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(300px 220px at 84% 18%, rgba(110,86,255,.12) 0%, rgba(110,86,255,.05) 34%, transparent 72%),
+      radial-gradient(190px 170px at 82% 16%, rgba(78,162,255,.08) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.58) 0%, rgba(7,17,31,.36) 34%, rgba(7,17,31,.26) 62%, rgba(7,17,31,.30) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.98) 0%, rgba(7,17,31,.93) 34%, rgba(7,17,31,.72) 50%, rgba(7,17,31,.24) 72%, rgba(7,17,31,.03) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right 8px top 114px/48% auto no-repeat;
+    opacity:1 !important;
+    filter:saturate(1.12) brightness(1.20) contrast(1.08) !important;
+  }
+}
+
+/* --- HERO MOBILE CARD BACKGROUND FIX v12 (final) --- */
+@media (max-width:640px){
+  .heroFlagship,
+  .heroFlagship--compact{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    min-height:0 !important;
+    gap:14px !important;
+  }
+
+  .heroFlagship::before,
+  .heroFlagship--compact::before{
+    content:none !important;
+    display:none !important;
+  }
+
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    opacity:1 !important;
+    filter:saturate(1.08) brightness(1.06) contrast(1.04) !important;
+    background:
+      radial-gradient(340px 230px at 84% 18%, rgba(110,86,255,.14) 0%, rgba(110,86,255,.05) 34%, transparent 72%),
+      radial-gradient(210px 180px at 82% 15%, rgba(78,162,255,.08) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.84) 0%, rgba(7,17,31,.58) 34%, rgba(7,17,31,.38) 62%, rgba(7,17,31,.50) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.97) 0%, rgba(7,17,31,.94) 32%, rgba(7,17,31,.78) 48%, rgba(7,17,31,.40) 70%, rgba(7,17,31,.12) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right -56px top 88px/154% auto no-repeat,
+      linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.02)), var(--gradient-hero) !important;
+  }
+
+  .heroFlagship__copy,
+  .heroFlagship__stage,
+  .heroFlagship__screen{
+    position:relative;
+    z-index:2;
+  }
+
+  .heroFlagship__copy{
+    max-width:none !important;
+    padding:8px 2px 0 !important;
+  }
+
+  .heroFlagship__copy h1{
+    max-width:7.5ch !important;
+  }
+
+  .heroFlagship__copy .lead{
+    max-width:18ch !important;
+  }
+
+  .heroFlagship__grid,
+  .heroFlagship__image,
+  .heroFlagship__floating{
+    display:none !important;
+  }
+
+  .heroFlagship__halo{
+    width:220px;
+    height:220px;
+    right:-8%;
+    top:8px;
+    opacity:.72;
   }
 
   .heroFlagship__stage{
-    min-height:220px;
-    margin-top:2px;
+    min-height:240px !important;
+    display:flex !important;
+    align-items:flex-end !important;
+    justify-content:stretch !important;
+    margin-top:6px !important;
+    gap:0 !important;
   }
 
-  .heroFlagship__screenHead strong{
-    font-size:22px;
-    max-width:none;
+  .heroFlagship__screen{
+    width:100% !important;
+    margin:0 !important;
+    padding:14px !important;
+    border-radius:20px !important;
+    background:linear-gradient(180deg, rgba(8,17,34,.78), rgba(10,20,40,.76)) !important;
+    box-shadow:0 18px 34px rgba(2,8,20,.30), inset 0 1px 0 rgba(255,255,255,.06) !important;
+    backdrop-filter:blur(10px);
+  }
+}
+
+@media (max-width:430px){
+  .heroFlagship::after,
+  .heroFlagship--compact::after{
+    background:
+      radial-gradient(300px 220px at 84% 18%, rgba(110,86,255,.14) 0%, rgba(110,86,255,.05) 34%, transparent 72%),
+      radial-gradient(190px 170px at 82% 15%, rgba(78,162,255,.08) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.86) 0%, rgba(7,17,31,.60) 34%, rgba(7,17,31,.40) 62%, rgba(7,17,31,.52) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.98) 0%, rgba(7,17,31,.95) 34%, rgba(7,17,31,.80) 50%, rgba(7,17,31,.42) 72%, rgba(7,17,31,.14) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago-mobile.webp') right -52px top 92px/160% auto no-repeat,
+      linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.02)), var(--gradient-hero) !important;
   }
 
-  .heroFlagship__screenGrid{
-    grid-template-columns:1fr;
-    gap:10px;
+  .heroFlagship__copy h1{
+    max-width:7.2ch !important;
   }
 
-  .heroSignal{
-    padding:14px;
-    border-radius:18px;
+  .heroFlagship__copy .lead{
+    max-width:17.5ch !important;
+  }
+
+  .heroFlagship__stage{
+    min-height:224px !important;
+  }
+}
+
+
+/* === HERO UNIFIED SYSTEM OVERRIDE v13 ===
+   Single background logic across all breakpoints.
+   Eliminates stacked/mobile asset switching and keeps one continuous composition.
+=== */
+.heroFlagship.heroFlagship--compact{
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1.02fr) minmax(360px,.98fr) !important;
+  gap:28px !important;
+  align-items:stretch !important;
+  min-height:780px !important;
+  padding:34px !important;
+  border-radius:34px !important;
+  background:linear-gradient(180deg, rgba(7,17,31,.94), rgba(7,17,31,.88)) !important;
+}
+
+.heroFlagship.heroFlagship--compact::before{
+  content:none !important;
+  display:none !important;
+}
+
+.heroFlagship.heroFlagship--compact::after{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+  background:
+    radial-gradient(520px 340px at 78% 26%, rgba(110,86,255,.18) 0%, rgba(110,86,255,.08) 34%, transparent 72%),
+    radial-gradient(260px 220px at 77% 23%, rgba(78,162,255,.10) 0%, transparent 74%),
+    linear-gradient(180deg, rgba(7,17,31,.52) 0%, rgba(7,17,31,.28) 42%, rgba(7,17,31,.36) 100%),
+    linear-gradient(90deg, rgba(7,17,31,.90) 0%, rgba(7,17,31,.78) 26%, rgba(7,17,31,.58) 42%, rgba(7,17,31,.26) 66%, rgba(7,17,31,.08) 100%),
+    url('/assets/images/hero-estudio-cabida-santiago.webp') 68% 50%/cover no-repeat,
+    linear-gradient(160deg, rgba(255,255,255,.03), rgba(255,255,255,.015)), var(--gradient-hero) !important;
+  opacity:1 !important;
+}
+
+.heroFlagship.heroFlagship--compact > *{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__copy{
+  max-width:640px !important;
+  padding:18px 8px 18px 8px !important;
+  justify-content:flex-start !important;
+  align-self:start !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__copy h1{
+  font-size:clamp(56px,6vw,82px) !important;
+  line-height:.93 !important;
+  letter-spacing:-.05em !important;
+  max-width:7.2ch !important;
+  margin:22px 0 18px !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__copy .lead{
+  max-width:28ch !important;
+  font-size:clamp(18px,1.42vw,22px) !important;
+  line-height:1.62 !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__stage{
+  min-height:100% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  margin:0 !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__screen{
+  width:min(470px,100%) !important;
+  margin:0 !important;
+  padding:20px !important;
+  border-radius:28px !important;
+  background:linear-gradient(180deg, rgba(8,17,34,.88), rgba(10,20,40,.84)) !important;
+  box-shadow:0 26px 60px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.06) !important;
+  backdrop-filter:blur(12px) !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__screenHead strong{
+  font-size:clamp(36px,2.6vw,48px) !important;
+  line-height:1.05 !important;
+  max-width:12ch !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__screenGrid{
+  grid-template-columns:1fr 1fr !important;
+  gap:14px !important;
+}
+
+.heroFlagship.heroFlagship--compact .heroFlagship__grid,
+.heroFlagship.heroFlagship--compact .heroFlagship__image,
+.heroFlagship.heroFlagship--compact .heroFlagship__halo,
+.heroFlagship.heroFlagship--compact .heroFlagship__floating{
+  display:none !important;
+}
+
+@media (max-width: 1180px){
+  .heroFlagship.heroFlagship--compact{
+    grid-template-columns:minmax(0,.98fr) minmax(320px,.92fr) !important;
+    min-height:740px !important;
+    padding:28px !important;
+    gap:20px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact::after{
+    background:
+      radial-gradient(460px 320px at 78% 28%, rgba(110,86,255,.17) 0%, rgba(110,86,255,.07) 34%, transparent 72%),
+      radial-gradient(230px 200px at 77% 24%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.56) 0%, rgba(7,17,31,.32) 42%, rgba(7,17,31,.40) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.92) 0%, rgba(7,17,31,.82) 28%, rgba(7,17,31,.62) 44%, rgba(7,17,31,.30) 68%, rgba(7,17,31,.10) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 66% 50%/cover no-repeat,
+      linear-gradient(160deg, rgba(255,255,255,.03), rgba(255,255,255,.015)), var(--gradient-hero) !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy h1{
+    font-size:clamp(50px,5.6vw,72px) !important;
+    max-width:7.4ch !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__screen{
+    width:min(420px,100%) !important;
+    padding:18px !important;
+  }
+}
+
+@media (max-width: 920px){
+  .heroFlagship.heroFlagship--compact{
+    grid-template-columns:1fr !important;
+    min-height:auto !important;
+    padding:24px !important;
+    gap:18px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact::after{
+    background:
+      radial-gradient(420px 290px at 82% 28%, rgba(110,86,255,.17) 0%, rgba(110,86,255,.07) 34%, transparent 72%),
+      radial-gradient(220px 190px at 81% 24%, rgba(78,162,255,.10) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.56) 0%, rgba(7,17,31,.30) 38%, rgba(7,17,31,.40) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.94) 0%, rgba(7,17,31,.86) 30%, rgba(7,17,31,.66) 46%, rgba(7,17,31,.34) 68%, rgba(7,17,31,.12) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 70% 52%/cover no-repeat,
+      linear-gradient(160deg, rgba(255,255,255,.03), rgba(255,255,255,.015)), var(--gradient-hero) !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy{
+    max-width:none !important;
+    padding:10px 4px 0 !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy h1{
+    font-size:clamp(44px,9vw,66px) !important;
+    max-width:7.5ch !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy .lead{
+    max-width:34ch !important;
+    font-size:18px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__stage{
+    min-height:340px !important;
+    align-items:flex-end !important;
+    justify-content:flex-start !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__screen{
+    width:min(520px,100%) !important;
+  }
+}
+
+@media (max-width: 640px){
+  .heroFlagship.heroFlagship--compact{
+    padding:20px 18px 18px !important;
+    border-radius:26px !important;
+    gap:16px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact::after{
+    background:
+      radial-gradient(320px 230px at 82% 24%, rgba(110,86,255,.16) 0%, rgba(110,86,255,.07) 36%, transparent 72%),
+      radial-gradient(170px 150px at 81% 21%, rgba(78,162,255,.09) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.62) 0%, rgba(7,17,31,.34) 40%, rgba(7,17,31,.46) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.95) 0%, rgba(7,17,31,.88) 38%, rgba(7,17,31,.68) 52%, rgba(7,17,31,.36) 72%, rgba(7,17,31,.12) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 73% 52%/cover no-repeat,
+      linear-gradient(160deg, rgba(255,255,255,.03), rgba(255,255,255,.015)), var(--gradient-hero) !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy{
+    padding:6px 2px 0 !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__kicker{
+    width:fit-content !important;
+    max-width:100% !important;
+    font-size:12px !important;
+    line-height:1.25 !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy h1{
+    font-size:clamp(38px,13vw,54px) !important;
+    max-width:7.1ch !important;
+    margin:16px 0 14px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy .lead{
+    max-width:24ch !important;
+    font-size:16px !important;
+    line-height:1.62 !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__stage{
+    min-height:0 !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__screen{
+    width:100% !important;
+    padding:16px !important;
+    border-radius:22px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__screenHead strong{
+    font-size:clamp(28px,7.2vw,36px) !important;
+    max-width:12ch !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__screenGrid{
+    grid-template-columns:1fr 1fr !important;
+    gap:12px !important;
+  }
+}
+
+@media (max-width: 430px){
+  .heroFlagship.heroFlagship--compact{
+    padding:18px 14px 16px !important;
+    border-radius:24px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact::after{
+    background:
+      radial-gradient(260px 200px at 82% 23%, rgba(110,86,255,.16) 0%, rgba(110,86,255,.07) 36%, transparent 72%),
+      radial-gradient(150px 135px at 81% 20%, rgba(78,162,255,.09) 0%, transparent 74%),
+      linear-gradient(180deg, rgba(7,17,31,.64) 0%, rgba(7,17,31,.36) 42%, rgba(7,17,31,.48) 100%),
+      linear-gradient(90deg, rgba(7,17,31,.96) 0%, rgba(7,17,31,.90) 40%, rgba(7,17,31,.70) 54%, rgba(7,17,31,.38) 74%, rgba(7,17,31,.14) 100%),
+      url('/assets/images/hero-estudio-cabida-santiago.webp') 76% 54%/cover no-repeat,
+      linear-gradient(160deg, rgba(255,255,255,.03), rgba(255,255,255,.015)), var(--gradient-hero) !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy h1{
+    font-size:clamp(34px,12.4vw,48px) !important;
+    max-width:6.8ch !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__copy .lead{
+    max-width:22ch !important;
+    font-size:15px !important;
+  }
+
+  .heroFlagship.heroFlagship--compact .heroFlagship__screenGrid{
+    grid-template-columns:1fr !important;
   }
 }
