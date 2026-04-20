@@ -2085,3 +2085,28 @@ body.internal-page .priceCard>.btn--full,
   .tableGuide tr>td{gap:12px;padding:8px 12px 12px!important}
   .tableGuide tr>td::before{flex-basis:38%;max-width:38%}
 }
+
+
+/* v39 mobile table clarity + satellite depth */
+@media (max-width: 767px){
+  .tableGuideWrap{overflow:visible!important;}
+  .tableGuide,
+  .tableGuide tbody,
+  .tableGuide tr,
+  .tableGuide td,
+  .tableGuide th{display:block!important;width:100%!important}
+  .tableGuide thead{display:none!important}
+  .tableGuide tr{border-bottom:1px solid rgba(10,18,32,.08)!important}
+  .tableGuide tr:last-child{border-bottom:0!important}
+  .tableGuide tr>th{padding:14px 14px 6px!important;border-bottom:0!important;background:transparent!important;font-size:11px!important;line-height:1.4!important;letter-spacing:.08em!important}
+  .tableGuide tr>td{padding:6px 14px 12px!important;border-bottom:0!important;font-size:13px!important;line-height:1.55!important;text-align:left!important}
+  .tableGuide tr>td::before{content:attr(data-label);display:block!important;margin:0 0 4px 0!important;max-width:none!important;font-size:11px!important;font-weight:800!important;letter-spacing:.08em!important;text-transform:uppercase!important;color:var(--text-3)!important}
+  .tableGuide.tableGuide--twoCol tr>td{padding-top:10px!important}
+  .tableGuide.tableGuide--twoCol tr>td:first-of-type{padding-bottom:8px!important}
+  .tableGuide.tableGuide--twoCol tr>td:last-of-type{padding-top:0!important;padding-bottom:14px!important}
+  .tableGuide .compact-value{display:block!important;max-width:none!important}
+  .hero--authority .hero__actions{grid-template-columns:1fr!important}
+  .hero--authority .hero__actions .btn{width:100%!important}
+}
+.satelliteCtaInline{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.satelliteCtaInline .btn{min-width:0}
