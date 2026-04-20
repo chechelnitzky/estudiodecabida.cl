@@ -2017,3 +2017,26 @@ body.internal-page .hero__visual{display:none}
 @media (max-width: 768px){
   .priceCard__actions{flex-direction:column}
 }
+
+
+/* v37 targeted fixes */
+body.internal-page .homeHero__panelWrap{display:none!important}
+body.internal-page .homeHero__inner{grid-template-columns:minmax(0,1fr)!important}
+body.internal-page .homeHero__copy{max-width:820px}
+.tableGuideWrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:28px}
+.tableGuideWrap .tableGuide{min-width:720px}
+.priceCard__actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.priceCard__actions .btn{flex:0 0 auto;min-height:48px;padding:0 18px;border-radius:14px;font-size:15px}
+@media (max-width: 920px){
+  .tableGuideWrap{padding-bottom:2px}
+  .tableGuideWrap .tableGuide{min-width:680px}
+  .priceCard__actions{flex-direction:row;justify-content:flex-start}
+  .priceCard__actions .btn{width:auto;min-width:0}
+}
+@media (max-width: 640px){
+  .tableGuideWrap{margin-top:10px}
+  .tableGuideWrap .tableGuide{min-width:640px}
+  .tableGuide td,.tableGuide th{padding:12px 14px;font-size:13px}
+  .tableGuide th{font-size:11px}
+  .priceCard__actions .btn{min-height:44px;padding:0 16px;font-size:14px}
+}
