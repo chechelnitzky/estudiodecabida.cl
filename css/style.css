@@ -2000,3 +2000,29 @@ body.internal-page .hero__visual{display:none}
     max-width:15ch !important;
   }
 }
+
+
+.pricing--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.comparisonTableWrap{overflow:auto;border-radius:24px;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-md)}
+.comparisonTable{width:100%;border-collapse:collapse;background:rgba(255,255,255,.95)}
+.comparisonTable th,.comparisonTable td{padding:16px 18px;text-align:left;border-bottom:1px solid rgba(10,18,32,.08);vertical-align:top}
+.comparisonTable th{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#5e687a;background:#f6f8fb}
+.comparisonTable tbody tr:last-child td{border-bottom:0}
+.relatedLinks a{display:block;padding:18px 20px;border-radius:20px;background:rgba(255,255,255,.92);border:1px solid rgba(10,18,32,.08);box-shadow:var(--shadow-md);font-weight:700}
+.relatedLinks a:hover{transform:translateY(-2px)}
+.ctaBand{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px;border-radius:32px;background:linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.03)), var(--gradient-hero);border:1px solid rgba(255,255,255,.10);box-shadow:0 30px 70px rgba(3,8,18,.22);color:var(--text-light)}
+.ctaBand .lead{color:var(--text-light-2)}
+.section--slate{padding:34px;border-radius:32px;background:linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.02)), var(--gradient-hero);border:1px solid rgba(255,255,255,.10);box-shadow:0 30px 70px rgba(3,8,18,.22);color:var(--text-light)}
+.section__head--light h2,.section__head--light .lead{color:var(--text-light)}
+.section__head--light .lead{color:var(--text-light-2)}
+.metricCard{padding:24px;border-radius:24px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));box-shadow:var(--shadow-md)}
+.metricCard strong{display:block;color:#fff;font-size:20px;line-height:1.15;letter-spacing:-.03em;margin-bottom:10px}
+.metricCard span{display:block;color:rgba(247,249,252,.70);font-size:15px;line-height:1.65}
+.pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:#eef3ff;color:#31529b;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.priceCard__name{font-size:28px;line-height:1.08;letter-spacing:-.04em;font-weight:900;margin:16px 0 10px}
+.priceCard__price{font-size:42px;line-height:1;letter-spacing:-.05em;font-weight:900;margin-bottom:14px}
+.priceCard--featured{border-color:rgba(69,163,255,.28);box-shadow:0 18px 42px rgba(69,163,255,.12)}
+.step{display:flex;gap:18px;align-items:flex-start}.step__num{width:42px;height:42px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:var(--gradient-accent);color:#fff;font-weight:900;flex:0 0 auto}
+.iconBox{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, rgba(124,92,255,.18), rgba(69,163,255,.18));font-weight:900;color:#2d4f9b;margin-bottom:14px}
+.faqList{display:grid;gap:14px}.faqItem{background:rgba(255,255,255,.92);border:1px solid rgba(10,18,32,.08);border-radius:20px;padding:18px 20px;box-shadow:var(--shadow-md)}.faqItem summary{cursor:pointer;font-weight:800;list-style:none}.faqItem summary::-webkit-details-marker{display:none}.faqItem p{margin:12px 0 0;color:var(--text-2)}
+@media (max-width: 900px){.grid2,.grid3,.grid4,.faqGrid,.relatedLinks,.footer__cols,.pricing,.pricing--two,.metricGrid--hero{grid-template-columns:1fr}.ctaBand{flex-direction:column;align-items:flex-start}.comparisonTable th,.comparisonTable td{padding:14px}}
