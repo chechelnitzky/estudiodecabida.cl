@@ -271,12 +271,13 @@ body.internal-page .hero__visual{display:none}
 .quoteBox{display:flex;justify-content:space-between;align-items:center;gap:18px}
 .metricCard{
   padding:20px;border-radius:24px;
-  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-  border:1px solid rgba(255,255,255,.10);
-  color:#fff;
+  background:linear-gradient(180deg, rgba(255,255,255,.96), rgba(244,247,252,.92));
+  border:1px solid rgba(10,18,32,.08);
+  color:var(--text);
+  box-shadow:var(--shadow-sm);
 }
-.metricCard strong{display:block;font-size:14px;margin-bottom:6px}
-.metricCard span{display:block;color:rgba(247,249,252,.72);font-size:14px;line-height:1.62}
+.metricCard strong{display:block;font-size:14px;margin-bottom:6px;color:var(--text)}
+.metricCard span{display:block;color:var(--text-2);font-size:14px;line-height:1.62}
 .priceCard{display:flex;flex-direction:column;gap:14px;position:relative}
 .priceCard__name{font-size:24px;font-weight:900;letter-spacing:-.04em}
 .priceCard__sub{font-size:14px;color:var(--text-2);line-height:1.68;min-height:58px}
@@ -2008,3 +2009,11 @@ body.internal-page .hero__visual{display:none}
 .priceCard .note{margin-top:auto}
 .homeHero__actions .btn{min-width:180px}
 @media (max-width: 920px){.tableGuide td:first-child,.tableGuide th:first-child{width:auto}}
+
+
+/* --- editorial fixes v36 --- */
+.priceCard__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.priceCard__actions .btn{flex:1 1 200px}
+@media (max-width: 768px){
+  .priceCard__actions{flex-direction:column}
+}
