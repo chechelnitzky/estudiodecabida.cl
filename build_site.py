@@ -316,7 +316,7 @@ home += '''
   <div class="section__head">
     <div>
       <p class="eyebrow">Qué hacemos exactamente</p>
-      <h2>No entregamos información suelta. Entregamos criterio accionable.</h2>
+      <h2>Los argumentos para decidir. El criterio para avanzar.</h2>
       <p class="lead">La gracia no es listar normas. La gracia es traducirlas en una conclusión usable para una compra, una oferta, una comparación o una decisión de diseño.</p>
     </div>
   </div>
