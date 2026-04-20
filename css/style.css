@@ -407,7 +407,25 @@ body.internal-page .hero__visual{display:none}
 .section--tightTop{padding-top:8px}
 .section--slate{padding:34px;border-radius:34px;background:linear-gradient(180deg,#0d1728,#111f36);box-shadow:0 28px 60px rgba(3,8,18,.22)}
 .section__head--light h2,.section__head--light .lead{color:#fff}
-.section__head--light .eyebrow{color:rgba(255,255,255,.72)}
+.section__head--light .eyebrow,
+.section--slate .eyebrow{
+  position:relative;
+  color:#eaf0ff;
+  border:1px solid rgba(123,145,255,.26);
+  background:linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.08));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08), 0 10px 24px rgba(8,16,34,.18);
+  padding:12px 20px;
+}
+.section__head--light .eyebrow::before,
+.section--slate .eyebrow::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  box-shadow:0 0 14px rgba(124,92,255,.45);
+  flex:0 0 8px;
+}
 .heroFlagship--compact{min-height:620px}
 .heroFlagship__trust--strong span:last-child{background:rgba(124,92,255,.12);border-color:rgba(124,92,255,.22);color:#fff}
 .stepsGrid{align-items:stretch}
