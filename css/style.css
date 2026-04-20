@@ -2110,3 +2110,66 @@ body.internal-page .priceCard>.btn--full,
 }
 .satelliteCtaInline{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
 .satelliteCtaInline .btn{min-width:0}
+
+
+/* v40 mobile table hierarchy clarity */
+@media (max-width: 767px){
+  .tableGuideWrap{padding:0!important}
+  .tableGuide tr{
+    padding:0!important;
+    margin:0!important;
+    border-bottom:1px solid rgba(10,18,32,.08)!important;
+  }
+  .tableGuide tr>th{
+    display:block!important;
+    margin:0!important;
+    padding:16px 16px 10px!important;
+    font-size:12px!important;
+    font-weight:900!important;
+    letter-spacing:.09em!important;
+    text-transform:uppercase!important;
+    color:#7d8799!important;
+    background:rgba(10,18,32,.02)!important;
+  }
+  .tableGuide tr>td{
+    display:block!important;
+    padding:10px 16px 14px 16px!important;
+    text-align:left!important;
+  }
+  .tableGuide tr>td::before{
+    content:attr(data-label)!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    width:auto!important;
+    max-width:none!important;
+    margin:0 0 8px 0!important;
+    padding:5px 10px!important;
+    border-radius:999px!important;
+    font-size:10px!important;
+    font-weight:900!important;
+    letter-spacing:.08em!important;
+    line-height:1!important;
+    text-transform:uppercase!important;
+    color:#647089!important;
+    background:rgba(100,112,137,.10)!important;
+    border:1px solid rgba(100,112,137,.14)!important;
+  }
+  .tableGuide tr>td[data-label="Comercial"]::before{
+    color:#6058d8!important;
+    background:rgba(96,88,216,.10)!important;
+    border-color:rgba(96,88,216,.18)!important;
+  }
+  .tableGuide tr>td[data-label="Técnica"]::before{
+    color:#3569b9!important;
+    background:rgba(53,105,185,.10)!important;
+    border-color:rgba(53,105,185,.18)!important;
+  }
+  .tableGuide .compact-value,
+  .tableGuide tr>td p,
+  .tableGuide tr>td span{
+    display:block!important;
+    padding-left:2px!important;
+  }
+  .tableGuide.tableGuide--twoCol tr>td:first-of-type{padding-bottom:10px!important}
+  .tableGuide.tableGuide--twoCol tr>td:last-of-type{padding-top:0!important;padding-bottom:16px!important}
+}
