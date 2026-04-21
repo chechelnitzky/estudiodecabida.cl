@@ -1,0 +1,32 @@
+# estudiodecabida.cl
+
+Sitio institucional sobre estudios de cabida para evaluar terrenos antes de comprar, invertir o desarrollar en Chile.
+
+## Propuesta
+Entregamos una base clara para decidir si un terreno conviene, bajo qué restricciones y con qué potencial razonable. Revisamos CIP, uso de suelo, altura, constructibilidad, restricciones y lectura predial aplicada.
+
+## Audiencias principales
+- inversionistas inmobiliarios
+- compradores de terrenos
+- arquitectos y desarrolladores
+- empresas y familias que necesitan validar un terreno antes de avanzar
+
+## Páginas clave
+- /
+- /estudio-de-cabida/
+- /precio/
+- /factibilidad-normativa/
+- /antes-de-comprar/
+- /que-puedo-construir/
+- /como-leer-un-cip/
+- /errores-de-cabida/
+- /casos/
+- /contacto/
+- /comunas/
+- /comunas/las-condes/
+- /comunas/providencia/
+- /comunas/vitacura/
+- /comunas/lo-barnechea/
+
+## Enfoque editorial
+El sitio prioriza claridad, decisión, profundidad útil, tono profesional y estructura entendible tanto para personas como para motores de búsqueda y asistentes de IA.
