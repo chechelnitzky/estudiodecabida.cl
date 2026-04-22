@@ -6,6 +6,11 @@
 .homeHeroSection{margin-bottom:32px}
 
 .homeHero{
+  --hero-desktop-image:url('/assets/images/hero-estudio-cabida-santiago.webp');
+  --hero-desktop-position:68% 50%;
+  --hero-tablet-position:72% 48%;
+  --hero-mobile-image:url('/assets/images/hero-estudio-cabida-mobile-gray-bg.webp');
+  --hero-mobile-position:64% 52%;
   position:relative;
   overflow:hidden;
   isolation:isolate;
@@ -43,7 +48,7 @@
   content:"";
   position:absolute;
   inset:0;
-  background:url('/assets/images/hero-estudio-cabida-santiago.webp') 68% 50%/cover no-repeat;
+  background:var(--hero-desktop-image) var(--hero-desktop-position)/cover no-repeat;
   opacity:.50;
   transform:scale(1.02);
 }
@@ -179,7 +184,7 @@
       linear-gradient(180deg, rgba(6,14,29,.04) 0%, rgba(6,14,29,.12) 100%);
   }
   .homeHero__bg::before{
-    background:url('/assets/images/hero-estudio-cabida-santiago.webp') 72% 48%/cover no-repeat;
+    background:var(--hero-desktop-image) var(--hero-tablet-position)/cover no-repeat;
     opacity:.46;
     transform:none;
   }
@@ -200,7 +205,7 @@
     min-height:auto;
     padding:16px 14px 18px;
     border-radius:24px;
-    background:    linear-gradient(180deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.38) 48%, rgba(0,0,0,.30) 100%),    linear-gradient(180deg, rgba(7,12,22,.07) 0%, rgba(7,12,22,.15) 62%, rgba(7,12,22,.29) 100%),    url('/assets/images/hero-estudio-cabida-mobile-gray-bg.webp') 64% 52%/cover no-repeat;
+    background:    linear-gradient(180deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.38) 48%, rgba(0,0,0,.30) 100%),    linear-gradient(180deg, rgba(7,12,22,.07) 0%, rgba(7,12,22,.15) 62%, rgba(7,12,22,.29) 100%),    var(--hero-mobile-image) var(--hero-mobile-position)/cover no-repeat;
   }
   .homeHero::before{display:none}
   .homeHero__bg::before{display:none}
@@ -220,7 +225,7 @@
   .homeHero{padding:14px 12px 18px;border-radius:22px;background:
     linear-gradient(180deg, rgba(0,0,0,.42) 0%, rgba(0,0,0,.38) 48%, rgba(0,0,0,.30) 100%),
     linear-gradient(180deg, rgba(7,12,22,.07) 0%, rgba(7,12,22,.15) 62%, rgba(7,12,22,.29) 100%),
-    url('/assets/images/hero-estudio-cabida-mobile-gray-bg.webp') 64% 52%/cover no-repeat;}
+    var(--hero-mobile-image) var(--hero-mobile-position)/cover no-repeat;}
   .homeHero__copy h1{font-size:clamp(32px,14.2vw,50px);max-width:7.4ch}
   .homeHero__lead{max-width:15ch}
 }
