@@ -2191,3 +2191,12 @@ body.internal-page .priceCard>.btn--full,
   .tableGuide.tableGuide--twoCol tr>td:first-of-type{padding-bottom:10px!important}
   .tableGuide.tableGuide--twoCol tr>td:last-of-type{padding-top:0!important;padding-bottom:16px!important}
 }
+
+
+.formHelp{color:var(--text-3)}
+.hero__actions{display:flex;gap:14px;flex-wrap:wrap}
+@media (max-width: 760px){
+  .homeHero__copy .muted{font-size:15px;line-height:1.55}
+  .hero__actions .btn{width:100%;justify-content:center}
+  .section__head .lead{max-width:none}
+}
