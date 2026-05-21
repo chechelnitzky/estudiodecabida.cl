@@ -2191,3 +2191,10 @@ body.internal-page .priceCard>.btn--full,
   .tableGuide.tableGuide--twoCol tr>td:first-of-type{padding-bottom:10px!important}
   .tableGuide.tableGuide--twoCol tr>td:last-of-type{padding-top:0!important;padding-bottom:16px!important}
 }
+
+/* Conversion update: lead form + thank you */
+.leadForm .formActions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}
+.leadForm button{border:0;cursor:pointer;font-family:inherit}
+.formLegal{font-size:12px;line-height:1.45;color:rgba(17,17,17,.58);margin:12px 0 0}
+.thankYouPage .ctaBand{border-radius:28px}
+@media (min-width: 820px){.leadForm .formActions{grid-template-columns:1.2fr .8fr}}

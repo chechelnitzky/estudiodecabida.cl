@@ -106,6 +106,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  const leadForms = document.querySelectorAll('[data-lead-form]');
+  leadForms.forEach((leadForm) => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const pageField = leadForm.querySelector('[data-lead-page]');
+    const urlField = leadForm.querySelector('[data-lead-url]');
+    const referrerField = leadForm.querySelector('[data-lead-referrer]');
+    if (pageField) pageField.value = window.location.pathname;
+    if (urlField) urlField.value = window.location.href;
+    if (referrerField) referrerField.value = document.referrer || 'direct';
+    leadForm.querySelectorAll('[data-utm]').forEach((field) => {
+      const key = field.dataset.utm;
+      field.value = urlParams.get(key) || '';
+    });
+    leadForm.querySelectorAll('input, select, textarea').forEach((field) => {
+      field.addEventListener('focus', () => pushEvent('form_start', { form_id: leadForm.id || 'lead_form', field: field.name || 'unknown' }), { once: true });
+    });
+    leadForm.addEventListener('submit', () => {
+      const completed = [...leadForm.querySelectorAll('input, select, textarea')].filter((field) => (field.value || '').trim()).length;
+      pushEvent('form_submit', { form_id: leadForm.id || 'lead_form', fields_completed: completed, destination: 'formsubmit', lead_type: 'terreno' });
+      pushEvent('generate_lead', { form_id: leadForm.id || 'lead_form', lead_type: 'terreno' });
+    });
+  });
+
   const form = document.querySelector('[data-whatsapp-form]');
   const submit = document.querySelector('[data-wa-form-submit]');
   if (form && submit) {

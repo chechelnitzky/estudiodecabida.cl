@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://estudiodecabida.cl/</loc></url>
   <url><loc>https://estudiodecabida.cl/precios/</loc></url>
-  <url><loc>https://estudiodecabida.cl/precio/</loc></url>
   <url><loc>https://estudiodecabida.cl/estudio-de-cabida/</loc></url>
   <url><loc>https://estudiodecabida.cl/estudio-de-cabida-comercial/</loc></url>
   <url><loc>https://estudiodecabida.cl/estudio-de-cabida-tecnica/</loc></url>
@@ -26,4 +25,5 @@
   <url><loc>https://estudiodecabida.cl/comunas/lo-barnechea/</loc></url>
   <url><loc>https://estudiodecabida.cl/comunas/region-metropolitana/</loc></url>
   <url><loc>https://estudiodecabida.cl/errores-de-cabida/</loc></url>
+  <url><loc>https://estudiodecabida.cl/gracias/</loc></url>
 </urlset>
